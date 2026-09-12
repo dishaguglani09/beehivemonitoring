@@ -103,7 +103,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="flex h-screen overflow-hidden text-gray-200">
       {/* Desktop Sidebar */}
       <aside
-        className={`hidden lg:flex flex-col flex-shrink-0 glass-panel-elevated border-r border-[var(--border-subtle)] transition-all duration-250 z-30 ${
+        className={`hidden lg:flex flex-col flex-shrink-0 glass-panel-elevated border-r border-[var(--border-subtle)] transition-all duration-250 z-30 print:hidden ${
           collapsed ? 'w-16' : 'w-60'
         }`}
       >
@@ -262,7 +262,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Main Container */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
         {/* Top Header */}
-        <header className="glass-panel border-b border-[var(--border-subtle)] px-4 lg:px-6 h-16 flex items-center justify-between gap-3 flex-shrink-0 z-20 sticky top-0">
+        <header className="glass-panel border-b border-[var(--border-subtle)] px-4 lg:px-6 h-16 flex items-center justify-between gap-3 flex-shrink-0 z-20 sticky top-0 print:hidden">
           <div className="flex items-center gap-3 min-w-0">
             {/* Mobile Menu Hamburger */}
             <button

@@ -56,10 +56,52 @@ function HealthRing({ score, size = 68 }: { score: number; size?: number }) {
   )
 }
 
+import { useSimulationContext } from '../context/SimulationContext'
+
 export default function HiveDetails() {
+  const { currentReading, currentSwarmEvent } = useSimulationContext()
   const { id } = useParams()
   const navigate = useNavigate()
-  const hive = hives.find(h => h.id === id) || hives[0]
+  
+  // Dynamic relative time based on local elapsed time
+  const [lastUpdateLocalTime, setLastUpdateLocalTime] = React.useState(Date.now())
+  const [relativeTime, setRelativeTime] = React.useState('just now')
+
+  React.useEffect(() => {
+    setLastUpdateLocalTime(Date.now())
+    setRelativeTime('just now')
+  }, [currentReading?.timestamp])
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      const seconds = Math.floor((Date.now() - lastUpdateLocalTime) / 1000)
+      if (seconds < 5) {
+        setRelativeTime('just now')
+      } else if (seconds < 60) {
+        setRelativeTime(`${seconds} sec ago`)
+      } else {
+        const mins = Math.floor(seconds / 60)
+        setRelativeTime(`${mins} min ago`)
+      }
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [lastUpdateLocalTime])
+
+  const hive = hives.find(h => h.id === id) || hives[0] || { 
+    id: 'A01', 
+    name: 'Alpha Hive Node', 
+    location: 'North Field', 
+    healthScore: 92, 
+    status: 'healthy', 
+    lastUpdated: relativeTime, 
+    queenStatus: 'Present', 
+    swarmingRisk: currentSwarmEvent ? 'High' : 'Low', 
+    swarmingRiskPct: currentSwarmEvent ? 85 : 11, 
+    temperature: currentReading?.brood_temp || 34.5, 
+    humidity: currentReading?.humidity || 62, 
+    weight: currentReading?.weight_kg || 42, 
+    weightChange: 1.2 
+  }
 
   const [activeTab, setActiveTab] = useState<'telemetry' | 'hardware' | 'inspections'>('telemetry')
   const [inspections, setInspections] = useState([
@@ -182,7 +224,7 @@ export default function HiveDetails() {
               <StatusBadge status={hive.status} size="sm" />
             </div>
             <p className="text-xs font-medium text-[var(--text-tertiary)] uppercase tracking-wider">
-              Location: <strong className="text-[var(--text-primary)]">{hive.location}</strong> · Last Sync: {hive.lastUpdated}
+              Location: <strong className="text-[var(--text-primary)]">{hive.location}</strong> · Last Sync: {relativeTime}
             </p>
             <div className="flex flex-wrap items-center gap-4 text-xs mt-3">
               <span className="text-[var(--text-tertiary)] uppercase tracking-wider font-bold">

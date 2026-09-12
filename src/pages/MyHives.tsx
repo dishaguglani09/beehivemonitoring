@@ -47,28 +47,47 @@ function HealthRing({ score, finalScore, size = 56 }: { score: number; finalScor
   )
 }
 
-function formatTimeAgo(ts: string) {
-  const diff = Date.now() - new Date(ts).getTime()
-  if (diff < 60000) return 'Just now'
-  if (diff < 3600000) return `${Math.floor(diff / 60000)}m ago`
-  return `${Math.floor(diff / 3600000)}h ago`
 }
 
 export default function MyHives() {
-  const { currentReading, isSwarmEvent, weightDelta } = useSimulationContext()
+  const { currentReading, currentSwarmEvent, weightDelta } = useSimulationContext()
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const [sortBy, setSortBy] = useState('health')
   const [statusFilter, setStatusFilter] = useState('all')
+
+  // Dynamic relative time based on local elapsed time
+  const [lastUpdateLocalTime, setLastUpdateLocalTime] = React.useState(Date.now())
+  const [relativeTime, setRelativeTime] = React.useState('just now')
+
+  React.useEffect(() => {
+    setLastUpdateLocalTime(Date.now())
+    setRelativeTime('just now')
+  }, [currentReading?.timestamp])
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      const seconds = Math.floor((Date.now() - lastUpdateLocalTime) / 1000)
+      if (seconds < 5) {
+        setRelativeTime('just now')
+      } else if (seconds < 60) {
+        setRelativeTime(`${seconds} sec ago`)
+      } else {
+        const mins = Math.floor(seconds / 60)
+        setRelativeTime(`${mins} min ago`)
+      }
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [lastUpdateLocalTime])
 
   // Calculate Health Score (0-100)
   const healthScore = useMemo(() => {
     let score = 100
     if (currentReading.brood_temp < 34.5 || currentReading.brood_temp > 35.5) score -= 15
     if (currentReading.humidity < 50 || currentReading.humidity > 65) score -= 10
-    if (isSwarmEvent) score -= 40
+    if (currentSwarmEvent) score -= 40
     return Math.max(0, score)
-  }, [currentReading.brood_temp, currentReading.humidity, isSwarmEvent])
+  }, [currentReading.brood_temp, currentReading.humidity, currentSwarmEvent])
 
   const status = healthScore >= 90 ? 'healthy' : healthScore >= 75 ? 'attention' : 'critical'
 
@@ -84,10 +103,10 @@ export default function MyHives() {
     name: 'Alpha Hive Node',
     location: 'North Field',
     status: isHealthAnimating ? 'analyzing' : status,
-    lastUpdated: formatTimeAgo(currentReading.timestamp),
+    lastUpdated: relativeTime,
     weightChange: weightDelta,
-    beeActivity: isSwarmEvent ? 'Swarming' : 'High',
-    swarmingRisk: isSwarmEvent ? 'High' : 'Low'
+    beeActivity: currentSwarmEvent ? 'Swarming' : 'High',
+    swarmingRisk: currentSwarmEvent ? 'High' : 'Low'
   }
 
   // Determine if it matches search/filter (even though there's only one, keep UI working)

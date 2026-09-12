@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from "react"
-import { THRESHOLDS } from "../config/thresholds"
+import { THRESHOLDS as DEFAULT_THRESHOLDS } from "../config/thresholds"
 import normalData from "../data/beehive_normal_demo.json"
 import swarmingData from "../data/beehive_swarming_demo.json"
 import { fetchTelemetry } from "../services/api"
@@ -19,6 +19,8 @@ export interface TelemetryReading {
   event?: string
 }
 
+export type ThresholdsConfig = typeof DEFAULT_THRESHOLDS
+
 export type SimulationMode = "normal" | "swarming"
 
 export type AlertType = 'Temperature' | 'Humidity' | 'Weight' | 'Swarming' | 'Vibration' | 'Buzzing'
@@ -37,6 +39,12 @@ export interface Alert {
   status: 'active' | 'resolved'
 }
 
+export interface SwarmEventData {
+  timestamp: string
+  confidence: number
+  simulated: boolean
+}
+
 export interface SimulationState {
   mode: SimulationMode
   playing: boolean
@@ -46,10 +54,11 @@ export interface SimulationState {
   history: TelemetryReading[]
   dataset: TelemetryReading[]
   progress: number
-  isSwarmEvent: boolean
+  currentSwarmEvent: SwarmEventData | null
   weightDelta: number
   healthScore: number
   alerts: Alert[]
+  thresholds: ThresholdsConfig
 }
 
 export interface SimulationControls {
@@ -60,6 +69,8 @@ export interface SimulationControls {
   toggleMode: () => void
   seekTo: (index: number) => void
   resolveAlert: (id: string) => void
+  simulateSwarm: () => void
+  setThresholds: React.Dispatch<React.SetStateAction<ThresholdsConfig>>
 }
 
 const TICK_INTERVAL_MS = 2000
@@ -72,6 +83,8 @@ export default function useSimulation(): SimulationState & SimulationControls {
 
   const [alerts, setAlerts] = useState<Alert[]>([])
   const [apiDataset, setApiDataset] = useState<TelemetryReading[] | null>(null)
+  const [currentSwarmEvent, setCurrentSwarmEvent] = useState<SwarmEventData | null>(null)
+  const [thresholds, setThresholds] = useState<ThresholdsConfig>(DEFAULT_THRESHOLDS)
 
   useEffect(() => {
     let mounted = true
@@ -101,13 +114,28 @@ export default function useSimulation(): SimulationState & SimulationControls {
   const progress =
     dataset.length > 1 ? (currentIndex / (dataset.length - 1)) * 100 : 0
 
-  // Detect swarming event: current timestamp >= event field
-  const isSwarmEvent = (() => {
-    if (mode !== "swarming" || !currentReading.event) return false
-    const currentTime = new Date(currentReading.timestamp).getTime()
-    const eventTime = new Date(currentReading.event).getTime()
-    return currentTime >= eventTime
-  })()
+  // Check if there's a real swarm event in the data
+  useEffect(() => {
+    if (!currentReading) return
+    
+    // Clear event if we restarted or changed modes
+    if (currentIndex === 72 || currentIndex === 0) {
+      setCurrentSwarmEvent(null)
+    }
+
+    if (currentReading.event) {
+      const currentTime = new Date(currentReading.timestamp).getTime()
+      const eventTime = new Date(currentReading.event).getTime()
+      
+      if (currentTime >= eventTime) {
+        setCurrentSwarmEvent({
+          timestamp: currentReading.event,
+          confidence: 94, // or whatever value
+          simulated: false
+        })
+      }
+    }
+  }, [currentReading, currentIndex])
 
   // Weight delta from previous reading
   const weightDelta = previousReading
@@ -118,9 +146,9 @@ export default function useSimulation(): SimulationState & SimulationControls {
     let score = 100
     if (currentReading.brood_temp < THRESHOLDS.temperature.min || currentReading.brood_temp > THRESHOLDS.temperature.max) score -= 15
     if (currentReading.humidity < THRESHOLDS.humidity.min || currentReading.humidity > THRESHOLDS.humidity.max) score -= 10
-    if (isSwarmEvent) score -= 40
+    if (currentSwarmEvent) score -= 40
     return Math.max(0, score)
-  }, [currentReading.brood_temp, currentReading.humidity, isSwarmEvent])
+  }, [currentReading.brood_temp, currentReading.humidity, currentSwarmEvent])
 
   // Process Alerts on reading change
   useEffect(() => {
@@ -149,25 +177,25 @@ export default function useSimulation(): SimulationState & SimulationControls {
       }
 
       // Check temp
-      if (currentReading.brood_temp > THRESHOLDS.temperature.max) {
-        addAlertIfMissing('Temperature', 'critical', `Temperature: ${currentReading.brood_temp}°C (Expected: ${THRESHOLDS.temperature.min}-${THRESHOLDS.temperature.max}°C)`, 'Internal brood nest temperature has exceeded safe threshold.', 'Open upper ventilation vent.', 'Sensor correlation indicates elevated fanning frequency.')
-      } else if (currentReading.brood_temp < THRESHOLDS.temperature.min) {
+      if (currentReading.brood_temp > thresholds.temperature.max) {
+        addAlertIfMissing('Temperature', 'critical', `Temperature: ${currentReading.brood_temp}°C (Expected: ${thresholds.temperature.min}-${thresholds.temperature.max}°C)`, 'Internal brood nest temperature has exceeded safe threshold.', 'Open upper ventilation vent.', 'Sensor correlation indicates elevated fanning frequency.')
+      } else if (currentReading.brood_temp < thresholds.temperature.min) {
         addAlertIfMissing('Temperature', 'warning', `Temperature: ${currentReading.brood_temp}°C`, 'Brood nest temperature below threshold.', 'Check hive insulation.', null)
       }
 
       // Check humidity
-      if (currentReading.humidity > THRESHOLDS.humidity.max) {
-         addAlertIfMissing('Humidity', 'warning', `Humidity: ${currentReading.humidity}% (Expected: ${THRESHOLDS.humidity.min}-${THRESHOLDS.humidity.max}%)`, 'Internal moisture levels elevated above maximum threshold.', 'Inspect bottom board mesh for blockages.', null)
+      if (currentReading.humidity > thresholds.humidity.max) {
+         addAlertIfMissing('Humidity', 'warning', `Humidity: ${currentReading.humidity}% (Expected: ${thresholds.humidity.min}-${thresholds.humidity.max}%)`, 'Internal moisture levels elevated above maximum threshold.', 'Inspect bottom board mesh for blockages.', null)
       }
 
       // Check swarming
-      if (isSwarmEvent) {
+      if (currentSwarmEvent) {
          addAlertIfMissing('Swarming', 'critical', `Swarm Activity Detected`, 'Elevated buzzing activity and unusual movement patterns detected.', 'Conduct physical frame inspection immediately.', 'Possible swarming emergence detected by audio frequency drop.')
       }
 
       return newAlerts
     })
-  }, [currentReading, isSwarmEvent])
+  }, [currentReading, currentSwarmEvent])
 
   // Tick forward
   useEffect(() => {
@@ -211,14 +239,13 @@ export default function useSimulation(): SimulationState & SimulationControls {
 
   const setMode = useCallback(
     (newMode: SimulationMode) => {
-      if (newMode !== mode) {
-        setPlaying(false)
-        setCurrentIndex(72)
-        setAlerts([])
-        setModeState(newMode)
-      }
+      setPlaying(false)
+      setCurrentIndex(72)
+      setAlerts([])
+      setCurrentSwarmEvent(null)
+      setModeState(newMode)
     },
-    [mode]
+    []
   )
 
   const toggleMode = useCallback(() => {
@@ -239,6 +266,14 @@ export default function useSimulation(): SimulationState & SimulationControls {
     )
   }, [])
 
+  const simulateSwarm = useCallback(() => {
+    setCurrentSwarmEvent({
+      timestamp: currentReading.timestamp,
+      confidence: 94,
+      simulated: true
+    })
+  }, [currentReading.timestamp])
+
   return {
     mode,
     playing,
@@ -248,7 +283,7 @@ export default function useSimulation(): SimulationState & SimulationControls {
     history,
     dataset,
     progress,
-    isSwarmEvent,
+    currentSwarmEvent,
     weightDelta,
     healthScore,
     alerts,
@@ -259,5 +294,8 @@ export default function useSimulation(): SimulationState & SimulationControls {
     toggleMode,
     seekTo,
     resolveAlert,
+    simulateSwarm,
+    thresholds,
+    setThresholds,
   }
 }

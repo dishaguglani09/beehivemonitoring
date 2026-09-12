@@ -83,10 +83,11 @@ function humidityStatus(h: number): {
 
 function ChartTooltip({ active, payload, label }: any) {
   if (!active || !payload?.length) return null
+  const fullTime = payload[0]?.payload?.fullTimestamp || label;
   return (
     <div className="glass-panel-elevated px-4 py-3 rounded-xl text-xs border border-[var(--border-subtle)] min-w-[150px]">
       <div className="text-[var(--text-tertiary)] text-[10px] mb-2 font-medium tracking-wider uppercase">
-        {label}
+        {fullTime}
       </div>
       {payload.map((p: any, i: number) => (
         <div key={i} className="flex items-center justify-between gap-3 py-1">
@@ -113,9 +114,11 @@ export default function ExpoDashboard() {
   const { currentReading: r, previousReading: prev, history } = sim
 
   const chartData = useMemo(() => {
-    const slice = history.slice(-72)
+    // Rolling window of the last 24 hours
+    const slice = history.slice(-24)
     return slice.map((d: TelemetryReading) => ({
       time: shortTime(d.timestamp),
+      fullTimestamp: formatTimestamp(d.timestamp),
       brood_temp: d.brood_temp,
       ambient_temp: d.ambient_temp,
       t_i_1: d.t_i_1,
@@ -137,9 +140,9 @@ export default function ExpoDashboard() {
     let score = 100
     if (r.brood_temp < 34.5 || r.brood_temp > 35.5) score -= 15
     if (r.humidity < 50 || r.humidity > 65) score -= 10
-    if (sim.isSwarmEvent) score -= 40
+    if (sim.currentSwarmEvent) score -= 40
     return Math.max(0, score)
-  }, [r.brood_temp, r.humidity, sim.isSwarmEvent])
+  }, [r.brood_temp, r.humidity, sim.currentSwarmEvent])
 
   const isHealthy = healthScore >= 80
 
@@ -159,10 +162,10 @@ export default function ExpoDashboard() {
         <div>
           <h1 className="font-display text-2xl lg:text-3xl font-bold text-[var(--text-primary)] tracking-tight flex items-center gap-3">
             Alpha Hive Node
-            <div className={`px-2.5 py-1 rounded-lg border flex items-center gap-1.5 ${isHealthAnimating ? 'bg-[var(--bg-card-hover)] border-[var(--border-medium)]' : isHealthy ? 'bg-[#16a34a]/10 border-[#16a34a]/30' : 'bg-[#dc2626]/10 border-[#dc2626]/30'}`}>
-              <span className={`w-1.5 h-1.5 rounded-full ${isHealthAnimating ? 'bg-white/50 animate-pulse' : isHealthy ? 'bg-[#4ade80] live-dot' : 'bg-[#ef4444] animate-pulse'}`} />
-              <span className={`text-[10px] font-bold uppercase tracking-wider ${isHealthAnimating ? 'text-[var(--text-secondary)]' : isHealthy ? 'text-[#4ade80]' : 'text-[#ef4444]'}`}>
-                {isHealthAnimating ? 'Analyzing' : isHealthy ? 'Optimal' : 'Attention Req'}
+            <div className={`px-2.5 py-1 rounded-lg border flex items-center gap-1.5 ${isHealthAnimating ? 'bg-[var(--bg-card-hover)] border-[var(--border-medium)]' : sim.currentSwarmEvent ? 'bg-[#dc2626]/10 border-[#dc2626]/30' : 'bg-[#16a34a]/10 border-[#16a34a]/30'}`}>
+              <span className={`w-1.5 h-1.5 rounded-full ${isHealthAnimating ? 'bg-white/50 animate-pulse' : sim.currentSwarmEvent ? 'bg-[#ef4444] animate-pulse' : 'bg-[#4ade80] live-dot'}`} />
+              <span className={`text-[10px] font-bold uppercase tracking-wider ${isHealthAnimating ? 'text-[var(--text-secondary)]' : sim.currentSwarmEvent ? 'text-[#ef4444]' : 'text-[#4ade80]'}`}>
+                {isHealthAnimating ? 'Analyzing' : sim.currentSwarmEvent ? 'Attention Req' : 'Normal State'}
               </span>
             </div>
           </h1>
@@ -185,14 +188,14 @@ export default function ExpoDashboard() {
               Normal State
             </button>
             <button
-              onClick={() => sim.setMode("swarming")}
+              onClick={() => sim.simulateSwarm()}
               className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
-                sim.mode === "swarming"
+                sim.currentSwarmEvent?.simulated
                   ? "bg-[#dc2626]/20 text-[#fca5a5] shadow-[0_0_10px_rgba(220,38,38,0.2)] border border-[#dc2626]/30"
                   : "text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
               }`}
             >
-              Swarm Event
+              Simulate Swarm Event
             </button>
           </div>
 
@@ -208,17 +211,17 @@ export default function ExpoDashboard() {
       </div>
 
       {/* ════════════════ Alert Banner (Conditional) ════════════════ */}
-      {sim.mode === "swarming" && sim.isSwarmEvent && (
+      {sim.currentSwarmEvent && (
         <div className="alert-pulse rounded-2xl glass-panel border border-[#ef4444]/40 bg-[#dc2626]/10 p-5 flex items-center gap-4">
           <div className="w-12 h-12 rounded-xl bg-[#dc2626]/20 flex items-center justify-center flex-shrink-0 amber-glow-border border-none">
             <AlertTriangle size={24} className="text-[#ef4444]" />
           </div>
           <div className="flex-1 min-w-0">
             <div className="text-base font-bold text-[#fca5a5]">
-              Critical Alert: Swarming Event Detected
+              Swarming Event Detected
             </div>
             <div className="text-sm text-[var(--text-secondary)] mt-1">
-              Sudden mass weight reduction & temperature spike detected at {r.event ? formatTimestamp(r.event) : "unknown time"}. AI confidence: 94%. Immediate inspection recommended.
+              Swarming activity detected on {formatTimestamp(sim.currentSwarmEvent.timestamp)}. AI confidence: {sim.currentSwarmEvent.confidence}%.
             </div>
           </div>
         </div>
@@ -449,7 +452,7 @@ export default function ExpoDashboard() {
 
             <div className="space-y-4">
               <p className="text-[var(--text-secondary)] text-lg font-medium leading-tight">
-                {sim.mode === 'swarming' 
+                {sim.currentSwarmEvent 
                   ? "Anomalous mass reduction detected alongside interior temperature spike. High probability of swarming preparation." 
                   : "Stable internal microclimate maintained despite external temperature drop. Foraging activity normal."}
               </p>
@@ -458,7 +461,7 @@ export default function ExpoDashboard() {
                 <div className="glass-panel px-3 py-2 rounded-xl border border-[var(--border-subtle)] ai-glow-border">
                   <div className="text-[10px] text-[var(--text-tertiary)] uppercase tracking-widest mb-1">Confidence</div>
                   <div className="font-mono-data text-xl font-bold text-[var(--text-primary)]">
-                    {sim.mode === 'swarming' ? '94%' : '98%'}
+                    {sim.currentSwarmEvent ? `${sim.currentSwarmEvent.confidence}%` : '98%'}
                   </div>
                 </div>
               </div>
@@ -468,7 +471,7 @@ export default function ExpoDashboard() {
           <div className="mt-6 pt-4 border-t border-[var(--border-subtle)]">
             <div className="text-[10px] text-[var(--text-tertiary)] uppercase tracking-widest mb-1.5">Recommendation</div>
             <div className="text-sm font-semibold text-[#fbbf24]">
-              {sim.mode === 'swarming' ? 'Immediate visual inspection recommended.' : 'No intervention required.'}
+              {sim.currentSwarmEvent ? 'Immediate visual inspection recommended.' : 'No intervention required.'}
             </div>
           </div>
         </div>

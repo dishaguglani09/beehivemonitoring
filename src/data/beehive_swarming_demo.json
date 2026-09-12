@@ -10,8 +10,7 @@
     "ambient_temp": 11.49,
     "humidity": 49.48,
     "weight_kg": 32.07,
-    "pressure": 1026.93,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1026.93
   },
   {
     "timestamp": "2020-06-01 01:00:00",
@@ -24,8 +23,7 @@
     "ambient_temp": 10.08,
     "humidity": 52.17,
     "weight_kg": 32.06,
-    "pressure": 1026.33,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1026.33
   },
   {
     "timestamp": "2020-06-01 02:00:00",
@@ -33,13 +31,12 @@
     "t_i_1": 31.92,
     "t_i_2": 34.9,
     "t_i_3": 35.65,
-    "t_i_4": 34.0,
+    "t_i_4": 34,
     "t_i_5": 32.83,
     "ambient_temp": 8.93,
     "humidity": 44.98,
     "weight_kg": 32.05,
-    "pressure": 1026.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1026
   },
   {
     "timestamp": "2020-06-01 03:00:00",
@@ -52,8 +49,7 @@
     "ambient_temp": 8.74,
     "humidity": 44.96,
     "weight_kg": 32.05,
-    "pressure": 1026.49,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1026.49
   },
   {
     "timestamp": "2020-06-01 04:00:00",
@@ -66,8 +62,7 @@
     "ambient_temp": 9.3,
     "humidity": 47.11,
     "weight_kg": 32.03,
-    "pressure": 1027.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1027
   },
   {
     "timestamp": "2020-06-01 05:00:00",
@@ -80,8 +75,7 @@
     "ambient_temp": 11.52,
     "humidity": 45.6,
     "weight_kg": 31.99,
-    "pressure": 1027.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1027
   },
   {
     "timestamp": "2020-06-01 06:00:00",
@@ -94,8 +88,7 @@
     "ambient_temp": 13.79,
     "humidity": 44.11,
     "weight_kg": 31.92,
-    "pressure": 1027.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1027
   },
   {
     "timestamp": "2020-06-01 07:00:00",
@@ -108,8 +101,7 @@
     "ambient_temp": 16.8,
     "humidity": 48.17,
     "weight_kg": 31.88,
-    "pressure": 1027.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1027
   },
   {
     "timestamp": "2020-06-01 08:00:00",
@@ -122,8 +114,7 @@
     "ambient_temp": 21.61,
     "humidity": 49.85,
     "weight_kg": 31.85,
-    "pressure": 1027.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1027
   },
   {
     "timestamp": "2020-06-01 09:00:00",
@@ -136,8 +127,7 @@
     "ambient_temp": 23.22,
     "humidity": 49.33,
     "weight_kg": 31.83,
-    "pressure": 1026.5,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1026.5
   },
   {
     "timestamp": "2020-06-01 10:00:00",
@@ -150,8 +140,7 @@
     "ambient_temp": 24.95,
     "humidity": 48.49,
     "weight_kg": 31.84,
-    "pressure": 1026.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1026
   },
   {
     "timestamp": "2020-06-01 11:00:00",
@@ -164,8 +153,7 @@
     "ambient_temp": 27.19,
     "humidity": 48.49,
     "weight_kg": 31.84,
-    "pressure": 1025.3,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1025.3
   },
   {
     "timestamp": "2020-06-01 12:00:00",
@@ -178,8 +166,7 @@
     "ambient_temp": 28.22,
     "humidity": 47.87,
     "weight_kg": 32.98,
-    "pressure": 1025.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1025
   },
   {
     "timestamp": "2020-06-01 13:00:00",
@@ -192,8 +179,7 @@
     "ambient_temp": 28.74,
     "humidity": 46.07,
     "weight_kg": 35.06,
-    "pressure": 1024.58,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1024.58
   },
   {
     "timestamp": "2020-06-01 14:00:00",
@@ -206,8 +192,7 @@
     "ambient_temp": 28.9,
     "humidity": 45.52,
     "weight_kg": 35.05,
-    "pressure": 1024.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1024
   },
   {
     "timestamp": "2020-06-01 15:00:00",
@@ -220,8 +205,7 @@
     "ambient_temp": 27.84,
     "humidity": 47.23,
     "weight_kg": 35.37,
-    "pressure": 1023.48,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023.48
   },
   {
     "timestamp": "2020-06-01 16:00:00",
@@ -234,8 +218,7 @@
     "ambient_temp": 26.64,
     "humidity": 47.96,
     "weight_kg": 34.89,
-    "pressure": 1023.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023
   },
   {
     "timestamp": "2020-06-01 17:00:00",
@@ -248,8 +231,7 @@
     "ambient_temp": 24.57,
     "humidity": 45.15,
     "weight_kg": 33.86,
-    "pressure": 1023.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023
   },
   {
     "timestamp": "2020-06-01 18:00:00",
@@ -262,8 +244,7 @@
     "ambient_temp": 22.13,
     "humidity": 44.88,
     "weight_kg": 33.93,
-    "pressure": 1023.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023
   },
   {
     "timestamp": "2020-06-01 19:00:00",
@@ -276,8 +257,7 @@
     "ambient_temp": 20.19,
     "humidity": 46.78,
     "weight_kg": 33.95,
-    "pressure": 1023.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023
   },
   {
     "timestamp": "2020-06-01 20:00:00",
@@ -290,8 +270,7 @@
     "ambient_temp": 18.48,
     "humidity": 49.3,
     "weight_kg": 33.95,
-    "pressure": 1023.43,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023.43
   },
   {
     "timestamp": "2020-06-01 21:00:00",
@@ -304,8 +283,7 @@
     "ambient_temp": 17.2,
     "humidity": 50.55,
     "weight_kg": 33.95,
-    "pressure": 1024.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1024
   },
   {
     "timestamp": "2020-06-01 22:00:00",
@@ -315,11 +293,10 @@
     "t_i_3": 35.4,
     "t_i_4": 34.15,
     "t_i_5": 33.41,
-    "ambient_temp": 16.0,
+    "ambient_temp": 16,
     "humidity": 48.44,
     "weight_kg": 33.94,
-    "pressure": 1024.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1024
   },
   {
     "timestamp": "2020-06-01 23:00:00",
@@ -332,8 +309,7 @@
     "ambient_temp": 14.1,
     "humidity": 46.87,
     "weight_kg": 33.95,
-    "pressure": 1024.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1024
   },
   {
     "timestamp": "2020-06-02 00:00:00",
@@ -346,8 +322,7 @@
     "ambient_temp": 12.44,
     "humidity": 49.46,
     "weight_kg": 33.96,
-    "pressure": 1023.3,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023.3
   },
   {
     "timestamp": "2020-06-02 01:00:00",
@@ -360,8 +335,7 @@
     "ambient_temp": 11.98,
     "humidity": 49.23,
     "weight_kg": 33.97,
-    "pressure": 1023.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023
   },
   {
     "timestamp": "2020-06-02 02:00:00",
@@ -374,8 +348,7 @@
     "ambient_temp": 11.22,
     "humidity": 50.86,
     "weight_kg": 33.97,
-    "pressure": 1023.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023
   },
   {
     "timestamp": "2020-06-02 03:00:00",
@@ -388,8 +361,7 @@
     "ambient_temp": 11.14,
     "humidity": 44.96,
     "weight_kg": 33.98,
-    "pressure": 1023.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1023
   },
   {
     "timestamp": "2020-06-02 04:00:00",
@@ -402,8 +374,7 @@
     "ambient_temp": 12.83,
     "humidity": 42.99,
     "weight_kg": 33.93,
-    "pressure": 1022.96,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1022.96
   },
   {
     "timestamp": "2020-06-02 05:00:00",
@@ -416,8 +387,7 @@
     "ambient_temp": 15.2,
     "humidity": 43.86,
     "weight_kg": 33.86,
-    "pressure": 1022.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1022
   },
   {
     "timestamp": "2020-06-02 06:00:00",
@@ -430,8 +400,7 @@
     "ambient_temp": 18.09,
     "humidity": 45.06,
     "weight_kg": 33.85,
-    "pressure": 1022.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1022
   },
   {
     "timestamp": "2020-06-02 07:00:00",
@@ -444,8 +413,7 @@
     "ambient_temp": 20.77,
     "humidity": 58.76,
     "weight_kg": 33.87,
-    "pressure": 1022.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1022
   },
   {
     "timestamp": "2020-06-02 08:00:00",
@@ -458,8 +426,7 @@
     "ambient_temp": 23.37,
     "humidity": 45.86,
     "weight_kg": 30.7,
-    "pressure": 1021.43,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1021.43
   },
   {
     "timestamp": "2020-06-02 09:00:00",
@@ -472,8 +439,7 @@
     "ambient_temp": 25.26,
     "humidity": 42.24,
     "weight_kg": 30.31,
-    "pressure": 1020.88,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1020.88
   },
   {
     "timestamp": "2020-06-02 10:00:00",
@@ -486,8 +452,7 @@
     "ambient_temp": 26.1,
     "humidity": 39.52,
     "weight_kg": 30.27,
-    "pressure": 1020.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1020
   },
   {
     "timestamp": "2020-06-02 11:00:00",
@@ -500,8 +465,7 @@
     "ambient_temp": 27.9,
     "humidity": 39.68,
     "weight_kg": 30.22,
-    "pressure": 1019.04,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1019.04
   },
   {
     "timestamp": "2020-06-02 12:00:00",
@@ -514,22 +478,20 @@
     "ambient_temp": 30.69,
     "humidity": 36.67,
     "weight_kg": 29.98,
-    "pressure": 1018.15,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1018.15
   },
   {
     "timestamp": "2020-06-02 13:00:00",
     "brood_temp": 34.83,
     "t_i_1": 33.83,
-    "t_i_2": 36.0,
+    "t_i_2": 36,
     "t_i_3": 36.16,
     "t_i_4": 34.44,
     "t_i_5": 33.7,
     "ambient_temp": 30.35,
     "humidity": 33.96,
     "weight_kg": 29.85,
-    "pressure": 1017.27,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1017.27
   },
   {
     "timestamp": "2020-06-02 14:00:00",
@@ -542,8 +504,7 @@
     "ambient_temp": 28.64,
     "humidity": 34.3,
     "weight_kg": 29.84,
-    "pressure": 1016.31,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1016.31
   },
   {
     "timestamp": "2020-06-02 15:00:00",
@@ -556,8 +517,7 @@
     "ambient_temp": 28.41,
     "humidity": 35.63,
     "weight_kg": 29.97,
-    "pressure": 1015.33,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015.33
   },
   {
     "timestamp": "2020-06-02 16:00:00",
@@ -570,8 +530,7 @@
     "ambient_temp": 27.7,
     "humidity": 35.45,
     "weight_kg": 29.99,
-    "pressure": 1014.45,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1014.45
   },
   {
     "timestamp": "2020-06-02 17:00:00",
@@ -584,8 +543,7 @@
     "ambient_temp": 26.13,
     "humidity": 38.79,
     "weight_kg": 30.02,
-    "pressure": 1014.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1014
   },
   {
     "timestamp": "2020-06-02 18:00:00",
@@ -598,8 +556,7 @@
     "ambient_temp": 24.94,
     "humidity": 42.15,
     "weight_kg": 30.05,
-    "pressure": 1013.03,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1013.03
   },
   {
     "timestamp": "2020-06-02 19:00:00",
@@ -612,8 +569,7 @@
     "ambient_temp": 21.62,
     "humidity": 47.68,
     "weight_kg": 30.07,
-    "pressure": 1013.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1013
   },
   {
     "timestamp": "2020-06-02 20:00:00",
@@ -626,8 +582,7 @@
     "ambient_temp": 19.61,
     "humidity": 51.54,
     "weight_kg": 30.09,
-    "pressure": 1013.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1013
   },
   {
     "timestamp": "2020-06-02 21:00:00",
@@ -640,8 +595,7 @@
     "ambient_temp": 18.04,
     "humidity": 53.43,
     "weight_kg": 30.12,
-    "pressure": 1012.03,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1012.03
   },
   {
     "timestamp": "2020-06-02 22:00:00",
@@ -654,8 +608,7 @@
     "ambient_temp": 17.34,
     "humidity": 54.81,
     "weight_kg": 30.14,
-    "pressure": 1011.98,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1011.98
   },
   {
     "timestamp": "2020-06-02 23:00:00",
@@ -668,8 +621,7 @@
     "ambient_temp": 17.06,
     "humidity": 55.85,
     "weight_kg": 30.15,
-    "pressure": 1011.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1011
   },
   {
     "timestamp": "2020-06-03 00:00:00",
@@ -682,8 +634,7 @@
     "ambient_temp": 16.39,
     "humidity": 57.33,
     "weight_kg": 30.16,
-    "pressure": 1010.33,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1010.33
   },
   {
     "timestamp": "2020-06-03 01:00:00",
@@ -696,8 +647,7 @@
     "ambient_temp": 15.69,
     "humidity": 58.62,
     "weight_kg": 30.18,
-    "pressure": 1009.88,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1009.88
   },
   {
     "timestamp": "2020-06-03 02:00:00",
@@ -710,12 +660,11 @@
     "ambient_temp": 15.06,
     "humidity": 59.18,
     "weight_kg": 30.19,
-    "pressure": 1009.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1009
   },
   {
     "timestamp": "2020-06-03 03:00:00",
-    "brood_temp": 33.0,
+    "brood_temp": 33,
     "t_i_1": 28.88,
     "t_i_2": 35.1,
     "t_i_3": 35.64,
@@ -724,8 +673,7 @@
     "ambient_temp": 14.81,
     "humidity": 57.89,
     "weight_kg": 30.19,
-    "pressure": 1008.37,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1008.37
   },
   {
     "timestamp": "2020-06-03 04:00:00",
@@ -738,8 +686,7 @@
     "ambient_temp": 14.95,
     "humidity": 56.5,
     "weight_kg": 30.22,
-    "pressure": 1008.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1008
   },
   {
     "timestamp": "2020-06-03 05:00:00",
@@ -752,8 +699,7 @@
     "ambient_temp": 17.11,
     "humidity": 55.57,
     "weight_kg": 30.22,
-    "pressure": 1007.96,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1007.96
   },
   {
     "timestamp": "2020-06-03 06:00:00",
@@ -766,8 +712,7 @@
     "ambient_temp": 20.46,
     "humidity": 50.25,
     "weight_kg": 30.2,
-    "pressure": 1007.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1007
   },
   {
     "timestamp": "2020-06-03 07:00:00",
@@ -780,8 +725,7 @@
     "ambient_temp": 24.21,
     "humidity": 45.81,
     "weight_kg": 30.17,
-    "pressure": 1006.8,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1006.8
   },
   {
     "timestamp": "2020-06-03 08:00:00",
@@ -794,13 +738,12 @@
     "ambient_temp": 27.03,
     "humidity": 42.31,
     "weight_kg": 30.09,
-    "pressure": 1006.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1006
   },
   {
     "timestamp": "2020-06-03 09:00:00",
     "brood_temp": 33.44,
-    "t_i_1": 30.0,
+    "t_i_1": 30,
     "t_i_2": 34.96,
     "t_i_3": 35.63,
     "t_i_4": 33.87,
@@ -808,8 +751,7 @@
     "ambient_temp": 28.71,
     "humidity": 42.58,
     "weight_kg": 30.05,
-    "pressure": 1005.92,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1005.92
   },
   {
     "timestamp": "2020-06-03 10:00:00",
@@ -822,8 +764,7 @@
     "ambient_temp": 30.22,
     "humidity": 41.28,
     "weight_kg": 30.01,
-    "pressure": 1005.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1005
   },
   {
     "timestamp": "2020-06-03 11:00:00",
@@ -836,8 +777,7 @@
     "ambient_temp": 28.8,
     "humidity": 37.9,
     "weight_kg": 29.98,
-    "pressure": 1004.29,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1004.29
   },
   {
     "timestamp": "2020-06-03 12:00:00",
@@ -850,8 +790,7 @@
     "ambient_temp": 29.94,
     "humidity": 39.05,
     "weight_kg": 29.98,
-    "pressure": 1003.49,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1003.49
   },
   {
     "timestamp": "2020-06-03 13:00:00",
@@ -864,8 +803,7 @@
     "ambient_temp": 29.05,
     "humidity": 37.96,
     "weight_kg": 29.91,
-    "pressure": 1003.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1003
   },
   {
     "timestamp": "2020-06-03 14:00:00",
@@ -878,8 +816,7 @@
     "ambient_temp": 25.64,
     "humidity": 37.01,
     "weight_kg": 29.96,
-    "pressure": 1002.99,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002.99
   },
   {
     "timestamp": "2020-06-03 15:00:00",
@@ -892,8 +829,7 @@
     "ambient_temp": 21.3,
     "humidity": 39.65,
     "weight_kg": 30.1,
-    "pressure": 1002.83,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002.83
   },
   {
     "timestamp": "2020-06-03 16:00:00",
@@ -906,8 +842,7 @@
     "ambient_temp": 20.23,
     "humidity": 42.79,
     "weight_kg": 30.22,
-    "pressure": 1002.08,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002.08
   },
   {
     "timestamp": "2020-06-03 17:00:00",
@@ -920,8 +855,7 @@
     "ambient_temp": 20.27,
     "humidity": 45.69,
     "weight_kg": 30.41,
-    "pressure": 1002.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002
   },
   {
     "timestamp": "2020-06-03 18:00:00",
@@ -934,8 +868,7 @@
     "ambient_temp": 18.94,
     "humidity": 48.39,
     "weight_kg": 30.25,
-    "pressure": 1002.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002
   },
   {
     "timestamp": "2020-06-03 19:00:00",
@@ -948,8 +881,7 @@
     "ambient_temp": 17.85,
     "humidity": 50.5,
     "weight_kg": 30.26,
-    "pressure": 1002.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002
   },
   {
     "timestamp": "2020-06-03 20:00:00",
@@ -962,8 +894,7 @@
     "ambient_temp": 17.27,
     "humidity": 54.81,
     "weight_kg": 30.27,
-    "pressure": 1002.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002
   },
   {
     "timestamp": "2020-06-03 21:00:00",
@@ -976,8 +907,7 @@
     "ambient_temp": 16.61,
     "humidity": 56.53,
     "weight_kg": 30.28,
-    "pressure": 1001.15,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1001.15
   },
   {
     "timestamp": "2020-06-03 22:00:00",
@@ -990,8 +920,7 @@
     "ambient_temp": 16.82,
     "humidity": 58.54,
     "weight_kg": 30.29,
-    "pressure": 1000.4,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1000.4
   },
   {
     "timestamp": "2020-06-03 23:00:00",
@@ -1004,8 +933,7 @@
     "ambient_temp": 16.29,
     "humidity": 58.73,
     "weight_kg": 30.29,
-    "pressure": 999.75,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 999.75
   },
   {
     "timestamp": "2020-06-04 00:00:00",
@@ -1018,8 +946,7 @@
     "ambient_temp": 15.02,
     "humidity": 60.04,
     "weight_kg": 30.3,
-    "pressure": 999.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 999
   },
   {
     "timestamp": "2020-06-04 01:00:00",
@@ -1032,8 +959,7 @@
     "ambient_temp": 14.21,
     "humidity": 58.69,
     "weight_kg": 30.31,
-    "pressure": 998.47,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 998.47
   },
   {
     "timestamp": "2020-06-04 02:00:00",
@@ -1046,8 +972,7 @@
     "ambient_temp": 13.43,
     "humidity": 59.12,
     "weight_kg": 30.33,
-    "pressure": 998.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 998
   },
   {
     "timestamp": "2020-06-04 03:00:00",
@@ -1060,8 +985,7 @@
     "ambient_temp": 13.35,
     "humidity": 56.26,
     "weight_kg": 30.34,
-    "pressure": 997.2,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 997.2
   },
   {
     "timestamp": "2020-06-04 04:00:00",
@@ -1074,8 +998,7 @@
     "ambient_temp": 14.15,
     "humidity": 53.61,
     "weight_kg": 30.35,
-    "pressure": 997.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 997
   },
   {
     "timestamp": "2020-06-04 05:00:00",
@@ -1088,13 +1011,12 @@
     "ambient_temp": 15.86,
     "humidity": 52.63,
     "weight_kg": 30.36,
-    "pressure": 996.02,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996.02
   },
   {
     "timestamp": "2020-06-04 06:00:00",
     "brood_temp": 32.46,
-    "t_i_1": 27.0,
+    "t_i_1": 27,
     "t_i_2": 34.91,
     "t_i_3": 35.2,
     "t_i_4": 33.66,
@@ -1102,8 +1024,7 @@
     "ambient_temp": 17.65,
     "humidity": 51.84,
     "weight_kg": 30.36,
-    "pressure": 996.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996
   },
   {
     "timestamp": "2020-06-04 07:00:00",
@@ -1116,8 +1037,7 @@
     "ambient_temp": 18.2,
     "humidity": 49.86,
     "weight_kg": 30.35,
-    "pressure": 995.44,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995.44
   },
   {
     "timestamp": "2020-06-04 08:00:00",
@@ -1130,8 +1050,7 @@
     "ambient_temp": 18.11,
     "humidity": 47.08,
     "weight_kg": 30.34,
-    "pressure": 995.25,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995.25
   },
   {
     "timestamp": "2020-06-04 09:00:00",
@@ -1144,8 +1063,7 @@
     "ambient_temp": 16.13,
     "humidity": 47.32,
     "weight_kg": 30.39,
-    "pressure": 995.97,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995.97
   },
   {
     "timestamp": "2020-06-04 10:00:00",
@@ -1158,8 +1076,7 @@
     "ambient_temp": 15.44,
     "humidity": 46.55,
     "weight_kg": 30.58,
-    "pressure": 995.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995
   },
   {
     "timestamp": "2020-06-04 11:00:00",
@@ -1172,8 +1089,7 @@
     "ambient_temp": 16.16,
     "humidity": 48.68,
     "weight_kg": 30.67,
-    "pressure": 994.87,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994.87
   },
   {
     "timestamp": "2020-06-04 12:00:00",
@@ -1186,8 +1102,7 @@
     "ambient_temp": 17.76,
     "humidity": 49.15,
     "weight_kg": 30.57,
-    "pressure": 994.13,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994.13
   },
   {
     "timestamp": "2020-06-04 13:00:00",
@@ -1200,8 +1115,7 @@
     "ambient_temp": 16.19,
     "humidity": 50.39,
     "weight_kg": 30.59,
-    "pressure": 994.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994
   },
   {
     "timestamp": "2020-06-04 14:00:00",
@@ -1214,8 +1128,7 @@
     "ambient_temp": 14.44,
     "humidity": 53.9,
     "weight_kg": 30.72,
-    "pressure": 994.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994
   },
   {
     "timestamp": "2020-06-04 15:00:00",
@@ -1228,8 +1141,7 @@
     "ambient_temp": 14.36,
     "humidity": 54.06,
     "weight_kg": 30.73,
-    "pressure": 994.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994
   },
   {
     "timestamp": "2020-06-04 16:00:00",
@@ -1242,8 +1154,7 @@
     "ambient_temp": 12.75,
     "humidity": 54.26,
     "weight_kg": 30.81,
-    "pressure": 994.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994
   },
   {
     "timestamp": "2020-06-04 17:00:00",
@@ -1256,8 +1167,7 @@
     "ambient_temp": 12.43,
     "humidity": 54.66,
     "weight_kg": 30.85,
-    "pressure": 994.23,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994.23
   },
   {
     "timestamp": "2020-06-04 18:00:00",
@@ -1270,8 +1180,7 @@
     "ambient_temp": 12.47,
     "humidity": 56.42,
     "weight_kg": 30.82,
-    "pressure": 994.88,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994.88
   },
   {
     "timestamp": "2020-06-04 19:00:00",
@@ -1284,8 +1193,7 @@
     "ambient_temp": 12.24,
     "humidity": 58.94,
     "weight_kg": 30.8,
-    "pressure": 995.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995
   },
   {
     "timestamp": "2020-06-04 20:00:00",
@@ -1296,10 +1204,9 @@
     "t_i_4": 33.67,
     "t_i_5": 27.73,
     "ambient_temp": 12.07,
-    "humidity": 60.0,
+    "humidity": 60,
     "weight_kg": 30.79,
-    "pressure": 995.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995
   },
   {
     "timestamp": "2020-06-04 21:00:00",
@@ -1312,8 +1219,7 @@
     "ambient_temp": 11.69,
     "humidity": 57.7,
     "weight_kg": 30.77,
-    "pressure": 995.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995
   },
   {
     "timestamp": "2020-06-04 22:00:00",
@@ -1326,8 +1232,7 @@
     "ambient_temp": 11.26,
     "humidity": 54.75,
     "weight_kg": 30.78,
-    "pressure": 995.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995
   },
   {
     "timestamp": "2020-06-04 23:00:00",
@@ -1340,8 +1245,7 @@
     "ambient_temp": 10.82,
     "humidity": 56.77,
     "weight_kg": 30.87,
-    "pressure": 995.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995
   },
   {
     "timestamp": "2020-06-05 00:00:00",
@@ -1354,8 +1258,7 @@
     "ambient_temp": 10.52,
     "humidity": 58.46,
     "weight_kg": 30.87,
-    "pressure": 995.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995
   },
   {
     "timestamp": "2020-06-05 01:00:00",
@@ -1368,8 +1271,7 @@
     "ambient_temp": 10.35,
     "humidity": 56.98,
     "weight_kg": 30.85,
-    "pressure": 995.75,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995.75
   },
   {
     "timestamp": "2020-06-05 02:00:00",
@@ -1382,22 +1284,20 @@
     "ambient_temp": 10.23,
     "humidity": 55.15,
     "weight_kg": 30.83,
-    "pressure": 995.23,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995.23
   },
   {
     "timestamp": "2020-06-05 03:00:00",
     "brood_temp": 30.63,
     "t_i_1": 22.64,
-    "t_i_2": 35.0,
+    "t_i_2": 35,
     "t_i_3": 35.29,
     "t_i_4": 33.51,
     "t_i_5": 26.72,
     "ambient_temp": 9.94,
     "humidity": 53.56,
     "weight_kg": 30.82,
-    "pressure": 996.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996
   },
   {
     "timestamp": "2020-06-05 04:00:00",
@@ -1410,8 +1310,7 @@
     "ambient_temp": 9.56,
     "humidity": 49.39,
     "weight_kg": 30.81,
-    "pressure": 996.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996
   },
   {
     "timestamp": "2020-06-05 05:00:00",
@@ -1424,8 +1323,7 @@
     "ambient_temp": 10.08,
     "humidity": 48.04,
     "weight_kg": 30.78,
-    "pressure": 996.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996
   },
   {
     "timestamp": "2020-06-05 06:00:00",
@@ -1438,8 +1336,7 @@
     "ambient_temp": 11.13,
     "humidity": 45.03,
     "weight_kg": 30.73,
-    "pressure": 996.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996
   },
   {
     "timestamp": "2020-06-05 07:00:00",
@@ -1452,8 +1349,7 @@
     "ambient_temp": 12.29,
     "humidity": 42.09,
     "weight_kg": 30.65,
-    "pressure": 996.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996
   },
   {
     "timestamp": "2020-06-05 08:00:00",
@@ -1466,8 +1362,7 @@
     "ambient_temp": 13.87,
     "humidity": 42.42,
     "weight_kg": 30.55,
-    "pressure": 995.35,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995.35
   },
   {
     "timestamp": "2020-06-05 09:00:00",
@@ -1480,8 +1375,7 @@
     "ambient_temp": 14.6,
     "humidity": 40.51,
     "weight_kg": 30.48,
-    "pressure": 995.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995
   },
   {
     "timestamp": "2020-06-05 10:00:00",
@@ -1494,8 +1388,7 @@
     "ambient_temp": 16.46,
     "humidity": 37.72,
     "weight_kg": 30.41,
-    "pressure": 994.37,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994.37
   },
   {
     "timestamp": "2020-06-05 11:00:00",
@@ -1508,8 +1401,7 @@
     "ambient_temp": 17.47,
     "humidity": 35.87,
     "weight_kg": 30.31,
-    "pressure": 993.45,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 993.45
   },
   {
     "timestamp": "2020-06-05 12:00:00",
@@ -1522,8 +1414,7 @@
     "ambient_temp": 16.92,
     "humidity": 35.1,
     "weight_kg": 30.28,
-    "pressure": 992.34,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 992.34
   },
   {
     "timestamp": "2020-06-05 13:00:00",
@@ -1536,8 +1427,7 @@
     "ambient_temp": 15.4,
     "humidity": 35.37,
     "weight_kg": 30.3,
-    "pressure": 991.47,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 991.47
   },
   {
     "timestamp": "2020-06-05 14:00:00",
@@ -1550,8 +1440,7 @@
     "ambient_temp": 12.76,
     "humidity": 40.4,
     "weight_kg": 30.49,
-    "pressure": 991.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 991
   },
   {
     "timestamp": "2020-06-05 15:00:00",
@@ -1564,8 +1453,7 @@
     "ambient_temp": 11.16,
     "humidity": 42.91,
     "weight_kg": 30.66,
-    "pressure": 991.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 991
   },
   {
     "timestamp": "2020-06-05 16:00:00",
@@ -1578,8 +1466,7 @@
     "ambient_temp": 11.09,
     "humidity": 43.65,
     "weight_kg": 30.6,
-    "pressure": 991.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 991
   },
   {
     "timestamp": "2020-06-05 17:00:00",
@@ -1592,8 +1479,7 @@
     "ambient_temp": 11.2,
     "humidity": 44.53,
     "weight_kg": 30.54,
-    "pressure": 991.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 991
   },
   {
     "timestamp": "2020-06-05 18:00:00",
@@ -1606,8 +1492,7 @@
     "ambient_temp": 10.73,
     "humidity": 42.74,
     "weight_kg": 30.47,
-    "pressure": 991.36,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 991.36
   },
   {
     "timestamp": "2020-06-05 19:00:00",
@@ -1620,8 +1505,7 @@
     "ambient_temp": 10.3,
     "humidity": 44.25,
     "weight_kg": 30.44,
-    "pressure": 992.65,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 992.65
   },
   {
     "timestamp": "2020-06-05 20:00:00",
@@ -1634,8 +1518,7 @@
     "ambient_temp": 9.85,
     "humidity": 44.62,
     "weight_kg": 30.44,
-    "pressure": 994.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994
   },
   {
     "timestamp": "2020-06-05 21:00:00",
@@ -1648,8 +1531,7 @@
     "ambient_temp": 9.36,
     "humidity": 44.6,
     "weight_kg": 30.44,
-    "pressure": 994.9,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 994.9
   },
   {
     "timestamp": "2020-06-05 22:00:00",
@@ -1662,8 +1544,7 @@
     "ambient_temp": 8.79,
     "humidity": 44.51,
     "weight_kg": 30.44,
-    "pressure": 995.62,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 995.62
   },
   {
     "timestamp": "2020-06-05 23:00:00",
@@ -1676,8 +1557,7 @@
     "ambient_temp": 8.48,
     "humidity": 42.06,
     "weight_kg": 30.44,
-    "pressure": 996.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996
   },
   {
     "timestamp": "2020-06-06 00:00:00",
@@ -1690,8 +1570,7 @@
     "ambient_temp": 8.38,
     "humidity": 42.94,
     "weight_kg": 30.44,
-    "pressure": 996.73,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 996.73
   },
   {
     "timestamp": "2020-06-06 01:00:00",
@@ -1704,8 +1583,7 @@
     "ambient_temp": 8.35,
     "humidity": 45.23,
     "weight_kg": 30.44,
-    "pressure": 997.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 997
   },
   {
     "timestamp": "2020-06-06 02:00:00",
@@ -1718,8 +1596,7 @@
     "ambient_temp": 8.24,
     "humidity": 45.74,
     "weight_kg": 30.45,
-    "pressure": 997.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 997
   },
   {
     "timestamp": "2020-06-06 03:00:00",
@@ -1732,8 +1609,7 @@
     "ambient_temp": 7.9,
     "humidity": 46.51,
     "weight_kg": 30.46,
-    "pressure": 997.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 997
   },
   {
     "timestamp": "2020-06-06 04:00:00",
@@ -1746,8 +1622,7 @@
     "ambient_temp": 8.46,
     "humidity": 43.23,
     "weight_kg": 30.45,
-    "pressure": 997.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 997
   },
   {
     "timestamp": "2020-06-06 05:00:00",
@@ -1760,8 +1635,7 @@
     "ambient_temp": 9.79,
     "humidity": 42.14,
     "weight_kg": 30.38,
-    "pressure": 997.46,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 997.46
   },
   {
     "timestamp": "2020-06-06 06:00:00",
@@ -1774,8 +1648,7 @@
     "ambient_temp": 11.1,
     "humidity": 37.83,
     "weight_kg": 30.36,
-    "pressure": 998.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 998
   },
   {
     "timestamp": "2020-06-06 07:00:00",
@@ -1788,8 +1661,7 @@
     "ambient_temp": 12.5,
     "humidity": 36.18,
     "weight_kg": 30.31,
-    "pressure": 998.1,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 998.1
   },
   {
     "timestamp": "2020-06-06 08:00:00",
@@ -1802,8 +1674,7 @@
     "ambient_temp": 14.2,
     "humidity": 35.88,
     "weight_kg": 30.24,
-    "pressure": 998.98,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 998.98
   },
   {
     "timestamp": "2020-06-06 09:00:00",
@@ -1816,8 +1687,7 @@
     "ambient_temp": 15.16,
     "humidity": 34.7,
     "weight_kg": 30.2,
-    "pressure": 999.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 999
   },
   {
     "timestamp": "2020-06-06 10:00:00",
@@ -1830,8 +1700,7 @@
     "ambient_temp": 15.72,
     "humidity": 34.54,
     "weight_kg": 30.16,
-    "pressure": 999.05,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 999.05
   },
   {
     "timestamp": "2020-06-06 11:00:00",
@@ -1844,8 +1713,7 @@
     "ambient_temp": 14.09,
     "humidity": 37.28,
     "weight_kg": 30.16,
-    "pressure": 999.96,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 999.96
   },
   {
     "timestamp": "2020-06-06 12:00:00",
@@ -1858,22 +1726,20 @@
     "ambient_temp": 15.46,
     "humidity": 39.23,
     "weight_kg": 30.18,
-    "pressure": 1000.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1000
   },
   {
     "timestamp": "2020-06-06 13:00:00",
     "brood_temp": 30.57,
     "t_i_1": 24.74,
-    "t_i_2": 34.0,
+    "t_i_2": 34,
     "t_i_3": 34.64,
     "t_i_4": 32.99,
     "t_i_5": 26.49,
     "ambient_temp": 18.95,
     "humidity": 39.26,
     "weight_kg": 29.97,
-    "pressure": 1000.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1000
   },
   {
     "timestamp": "2020-06-06 14:00:00",
@@ -1886,8 +1752,7 @@
     "ambient_temp": 14.69,
     "humidity": 36.62,
     "weight_kg": 29.96,
-    "pressure": 1000.73,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1000.73
   },
   {
     "timestamp": "2020-06-06 15:00:00",
@@ -1900,8 +1765,7 @@
     "ambient_temp": 16.7,
     "humidity": 37.6,
     "weight_kg": 29.93,
-    "pressure": 1001.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1001
   },
   {
     "timestamp": "2020-06-06 16:00:00",
@@ -1914,8 +1778,7 @@
     "ambient_temp": 16.15,
     "humidity": 33.29,
     "weight_kg": 29.9,
-    "pressure": 1001.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1001
   },
   {
     "timestamp": "2020-06-06 17:00:00",
@@ -1928,8 +1791,7 @@
     "ambient_temp": 15.65,
     "humidity": 37.77,
     "weight_kg": 29.91,
-    "pressure": 1001.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1001
   },
   {
     "timestamp": "2020-06-06 18:00:00",
@@ -1942,8 +1804,7 @@
     "ambient_temp": 15.26,
     "humidity": 42.72,
     "weight_kg": 29.91,
-    "pressure": 1001.58,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1001.58
   },
   {
     "timestamp": "2020-06-06 19:00:00",
@@ -1956,8 +1817,7 @@
     "ambient_temp": 14.13,
     "humidity": 50.2,
     "weight_kg": 29.91,
-    "pressure": 1002.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002
   },
   {
     "timestamp": "2020-06-06 20:00:00",
@@ -1970,8 +1830,7 @@
     "ambient_temp": 13.71,
     "humidity": 51.26,
     "weight_kg": 29.92,
-    "pressure": 1002.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002
   },
   {
     "timestamp": "2020-06-06 21:00:00",
@@ -1984,8 +1843,7 @@
     "ambient_temp": 12.65,
     "humidity": 50.86,
     "weight_kg": 29.92,
-    "pressure": 1002.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002
   },
   {
     "timestamp": "2020-06-06 22:00:00",
@@ -1998,8 +1856,7 @@
     "ambient_temp": 12.08,
     "humidity": 52.66,
     "weight_kg": 29.93,
-    "pressure": 1002.48,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002.48
   },
   {
     "timestamp": "2020-06-06 23:00:00",
@@ -2012,8 +1869,7 @@
     "ambient_temp": 12.07,
     "humidity": 49.86,
     "weight_kg": 29.92,
-    "pressure": 1002.58,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002.58
   },
   {
     "timestamp": "2020-06-07 00:00:00",
@@ -2026,8 +1882,7 @@
     "ambient_temp": 11.9,
     "humidity": 49.64,
     "weight_kg": 29.92,
-    "pressure": 1002.16,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002.16
   },
   {
     "timestamp": "2020-06-07 01:00:00",
@@ -2040,8 +1895,7 @@
     "ambient_temp": 11.64,
     "humidity": 47.84,
     "weight_kg": 29.92,
-    "pressure": 1002.91,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1002.91
   },
   {
     "timestamp": "2020-06-07 02:00:00",
@@ -2054,8 +1908,7 @@
     "ambient_temp": 11.18,
     "humidity": 49.38,
     "weight_kg": 29.91,
-    "pressure": 1003.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1003
   },
   {
     "timestamp": "2020-06-07 03:00:00",
@@ -2068,8 +1921,7 @@
     "ambient_temp": 11.2,
     "humidity": 43.94,
     "weight_kg": 29.9,
-    "pressure": 1003.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1003
   },
   {
     "timestamp": "2020-06-07 04:00:00",
@@ -2082,8 +1934,7 @@
     "ambient_temp": 11.68,
     "humidity": 43.25,
     "weight_kg": 29.89,
-    "pressure": 1003.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1003
   },
   {
     "timestamp": "2020-06-07 05:00:00",
@@ -2096,8 +1947,7 @@
     "ambient_temp": 12.66,
     "humidity": 40.01,
     "weight_kg": 29.88,
-    "pressure": 1003.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1003
   },
   {
     "timestamp": "2020-06-07 06:00:00",
@@ -2110,8 +1960,7 @@
     "ambient_temp": 13.53,
     "humidity": 40.1,
     "weight_kg": 29.86,
-    "pressure": 1003.78,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1003.78
   },
   {
     "timestamp": "2020-06-07 07:00:00",
@@ -2124,8 +1973,7 @@
     "ambient_temp": 14.41,
     "humidity": 37.13,
     "weight_kg": 29.86,
-    "pressure": 1004.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1004
   },
   {
     "timestamp": "2020-06-07 08:00:00",
@@ -2138,8 +1986,7 @@
     "ambient_temp": 15.26,
     "humidity": 36.47,
     "weight_kg": 29.83,
-    "pressure": 1004.77,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1004.77
   },
   {
     "timestamp": "2020-06-07 09:00:00",
@@ -2152,8 +1999,7 @@
     "ambient_temp": 16.44,
     "humidity": 37.21,
     "weight_kg": 29.82,
-    "pressure": 1005.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1005
   },
   {
     "timestamp": "2020-06-07 10:00:00",
@@ -2166,8 +2012,7 @@
     "ambient_temp": 16.4,
     "humidity": 33.26,
     "weight_kg": 29.79,
-    "pressure": 1005.73,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1005.73
   },
   {
     "timestamp": "2020-06-07 11:00:00",
@@ -2180,8 +2025,7 @@
     "ambient_temp": 16.61,
     "humidity": 33.83,
     "weight_kg": 29.78,
-    "pressure": 1006.58,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1006.58
   },
   {
     "timestamp": "2020-06-07 12:00:00",
@@ -2194,8 +2038,7 @@
     "ambient_temp": 15.54,
     "humidity": 36.49,
     "weight_kg": 29.91,
-    "pressure": 1006.95,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1006.95
   },
   {
     "timestamp": "2020-06-07 13:00:00",
@@ -2208,8 +2051,7 @@
     "ambient_temp": 12.06,
     "humidity": 39.12,
     "weight_kg": 30.32,
-    "pressure": 1008.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1008
   },
   {
     "timestamp": "2020-06-07 14:00:00",
@@ -2222,8 +2064,7 @@
     "ambient_temp": 15.33,
     "humidity": 39.69,
     "weight_kg": 30.19,
-    "pressure": 1008.02,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1008.02
   },
   {
     "timestamp": "2020-06-07 15:00:00",
@@ -2236,8 +2077,7 @@
     "ambient_temp": 16.31,
     "humidity": 41.67,
     "weight_kg": 30.1,
-    "pressure": 1008.92,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1008.92
   },
   {
     "timestamp": "2020-06-07 16:00:00",
@@ -2250,8 +2090,7 @@
     "ambient_temp": 13.66,
     "humidity": 46.73,
     "weight_kg": 30.25,
-    "pressure": 1009.59,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1009.59
   },
   {
     "timestamp": "2020-06-07 17:00:00",
@@ -2264,8 +2103,7 @@
     "ambient_temp": 14.94,
     "humidity": 47.01,
     "weight_kg": 30.21,
-    "pressure": 1010.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1010
   },
   {
     "timestamp": "2020-06-07 18:00:00",
@@ -2278,8 +2116,7 @@
     "ambient_temp": 13.84,
     "humidity": 49.6,
     "weight_kg": 30.2,
-    "pressure": 1010.23,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1010.23
   },
   {
     "timestamp": "2020-06-07 19:00:00",
@@ -2292,8 +2129,7 @@
     "ambient_temp": 13.2,
     "humidity": 53.56,
     "weight_kg": 30.21,
-    "pressure": 1011.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1011
   },
   {
     "timestamp": "2020-06-07 20:00:00",
@@ -2306,8 +2142,7 @@
     "ambient_temp": 13.15,
     "humidity": 52.69,
     "weight_kg": 30.21,
-    "pressure": 1011.81,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1011.81
   },
   {
     "timestamp": "2020-06-07 21:00:00",
@@ -2320,8 +2155,7 @@
     "ambient_temp": 12.74,
     "humidity": 54.06,
     "weight_kg": 30.2,
-    "pressure": 1012.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1012
   },
   {
     "timestamp": "2020-06-07 22:00:00",
@@ -2334,8 +2168,7 @@
     "ambient_temp": 12.68,
     "humidity": 55.47,
     "weight_kg": 30.2,
-    "pressure": 1012.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1012
   },
   {
     "timestamp": "2020-06-07 23:00:00",
@@ -2348,8 +2181,7 @@
     "ambient_temp": 12.54,
     "humidity": 56.37,
     "weight_kg": 30.2,
-    "pressure": 1012.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1012
   },
   {
     "timestamp": "2020-06-08 00:00:00",
@@ -2362,8 +2194,7 @@
     "ambient_temp": 11.59,
     "humidity": 54.57,
     "weight_kg": 30.21,
-    "pressure": 1012.07,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1012.07
   },
   {
     "timestamp": "2020-06-08 01:00:00",
@@ -2376,8 +2207,7 @@
     "ambient_temp": 11.44,
     "humidity": 54.85,
     "weight_kg": 30.21,
-    "pressure": 1013.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1013
   },
   {
     "timestamp": "2020-06-08 02:00:00",
@@ -2390,8 +2220,7 @@
     "ambient_temp": 11.41,
     "humidity": 54.24,
     "weight_kg": 30.22,
-    "pressure": 1012.98,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1012.98
   },
   {
     "timestamp": "2020-06-08 03:00:00",
@@ -2404,8 +2233,7 @@
     "ambient_temp": 10.52,
     "humidity": 54.63,
     "weight_kg": 30.22,
-    "pressure": 1013.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1013
   },
   {
     "timestamp": "2020-06-08 04:00:00",
@@ -2418,8 +2246,7 @@
     "ambient_temp": 11.25,
     "humidity": 54.62,
     "weight_kg": 30.23,
-    "pressure": 1013.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1013
   },
   {
     "timestamp": "2020-06-08 05:00:00",
@@ -2432,8 +2259,7 @@
     "ambient_temp": 13.13,
     "humidity": 48.99,
     "weight_kg": 30.2,
-    "pressure": 1013.61,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1013.61
   },
   {
     "timestamp": "2020-06-08 06:00:00",
@@ -2446,8 +2272,7 @@
     "ambient_temp": 14.52,
     "humidity": 51.26,
     "weight_kg": 30.15,
-    "pressure": 1014.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1014
   },
   {
     "timestamp": "2020-06-08 07:00:00",
@@ -2460,8 +2285,7 @@
     "ambient_temp": 15.07,
     "humidity": 49.96,
     "weight_kg": 30.11,
-    "pressure": 1014.52,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1014.52
   },
   {
     "timestamp": "2020-06-08 08:00:00",
@@ -2474,8 +2298,7 @@
     "ambient_temp": 15.41,
     "humidity": 47.14,
     "weight_kg": 30.07,
-    "pressure": 1015.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015
   },
   {
     "timestamp": "2020-06-08 09:00:00",
@@ -2488,8 +2311,7 @@
     "ambient_temp": 16.06,
     "humidity": 45.82,
     "weight_kg": 30.02,
-    "pressure": 1015.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015
   },
   {
     "timestamp": "2020-06-08 10:00:00",
@@ -2502,8 +2324,7 @@
     "ambient_temp": 17.77,
     "humidity": 45.66,
     "weight_kg": 29.96,
-    "pressure": 1015.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015
   },
   {
     "timestamp": "2020-06-08 11:00:00",
@@ -2516,8 +2337,7 @@
     "ambient_temp": 17.44,
     "humidity": 48.77,
     "weight_kg": 29.89,
-    "pressure": 1015.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015
   },
   {
     "timestamp": "2020-06-08 12:00:00",
@@ -2530,8 +2350,7 @@
     "ambient_temp": 17.53,
     "humidity": 52.67,
     "weight_kg": 29.84,
-    "pressure": 1015.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015
   },
   {
     "timestamp": "2020-06-08 13:00:00",
@@ -2544,8 +2363,7 @@
     "ambient_temp": 17.71,
     "humidity": 52.08,
     "weight_kg": 29.77,
-    "pressure": 1015.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015
   },
   {
     "timestamp": "2020-06-08 14:00:00",
@@ -2558,8 +2376,7 @@
     "ambient_temp": 17.95,
     "humidity": 52.54,
     "weight_kg": 29.74,
-    "pressure": 1015.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015
   },
   {
     "timestamp": "2020-06-08 15:00:00",
@@ -2572,8 +2389,7 @@
     "ambient_temp": 17.8,
     "humidity": 52.61,
     "weight_kg": 29.72,
-    "pressure": 1015.48,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1015.48
   },
   {
     "timestamp": "2020-06-08 16:00:00",
@@ -2586,8 +2402,7 @@
     "ambient_temp": 17.55,
     "humidity": 52.38,
     "weight_kg": 29.73,
-    "pressure": 1016.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1016
   },
   {
     "timestamp": "2020-06-08 17:00:00",
@@ -2600,8 +2415,7 @@
     "ambient_temp": 18.13,
     "humidity": 50.96,
     "weight_kg": 29.71,
-    "pressure": 1016.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1016
   },
   {
     "timestamp": "2020-06-08 18:00:00",
@@ -2614,8 +2428,7 @@
     "ambient_temp": 16.92,
     "humidity": 52.52,
     "weight_kg": 29.7,
-    "pressure": 1016.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1016
   },
   {
     "timestamp": "2020-06-08 19:00:00",
@@ -2628,8 +2441,7 @@
     "ambient_temp": 15.61,
     "humidity": 53.16,
     "weight_kg": 29.71,
-    "pressure": 1016.83,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1016.83
   },
   {
     "timestamp": "2020-06-08 20:00:00",
@@ -2642,8 +2454,7 @@
     "ambient_temp": 13.87,
     "humidity": 53.76,
     "weight_kg": 29.73,
-    "pressure": 1017.32,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1017.32
   },
   {
     "timestamp": "2020-06-08 21:00:00",
@@ -2656,8 +2467,7 @@
     "ambient_temp": 13.05,
     "humidity": 53.03,
     "weight_kg": 29.74,
-    "pressure": 1018.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1018
   },
   {
     "timestamp": "2020-06-08 22:00:00",
@@ -2670,8 +2480,7 @@
     "ambient_temp": 12.24,
     "humidity": 51.23,
     "weight_kg": 29.75,
-    "pressure": 1018.13,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1018.13
   },
   {
     "timestamp": "2020-06-08 23:00:00",
@@ -2684,8 +2493,7 @@
     "ambient_temp": 11.58,
     "humidity": 53.73,
     "weight_kg": 29.77,
-    "pressure": 1019.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1019
   },
   {
     "timestamp": "2020-06-09 00:00:00",
@@ -2698,8 +2506,7 @@
     "ambient_temp": 11.12,
     "humidity": 54.08,
     "weight_kg": 29.78,
-    "pressure": 1019.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1019
   },
   {
     "timestamp": "2020-06-09 01:00:00",
@@ -2712,8 +2519,7 @@
     "ambient_temp": 10.61,
     "humidity": 54.19,
     "weight_kg": 29.79,
-    "pressure": 1019.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1019
   },
   {
     "timestamp": "2020-06-09 02:00:00",
@@ -2726,8 +2532,7 @@
     "ambient_temp": 10.58,
     "humidity": 52.27,
     "weight_kg": 29.8,
-    "pressure": 1019.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1019
   },
   {
     "timestamp": "2020-06-09 03:00:00",
@@ -2740,8 +2545,7 @@
     "ambient_temp": 10.72,
     "humidity": 53.53,
     "weight_kg": 29.8,
-    "pressure": 1019.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1019
   },
   {
     "timestamp": "2020-06-09 04:00:00",
@@ -2754,8 +2558,7 @@
     "ambient_temp": 10.94,
     "humidity": 54.69,
     "weight_kg": 29.79,
-    "pressure": 1019.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1019
   },
   {
     "timestamp": "2020-06-09 05:00:00",
@@ -2768,8 +2571,7 @@
     "ambient_temp": 11.79,
     "humidity": 55.3,
     "weight_kg": 29.78,
-    "pressure": 1019.52,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1019.52
   },
   {
     "timestamp": "2020-06-09 06:00:00",
@@ -2782,8 +2584,7 @@
     "ambient_temp": 12.92,
     "humidity": 52.89,
     "weight_kg": 29.75,
-    "pressure": 1020.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1020
   },
   {
     "timestamp": "2020-06-09 07:00:00",
@@ -2796,7 +2597,6 @@
     "ambient_temp": 13.68,
     "humidity": 50.32,
     "weight_kg": 29.73,
-    "pressure": 1020.0,
-    "event": "2020-06-02 07:30:00"
+    "pressure": 1020
   }
 ]

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Thermometer,
@@ -87,11 +87,37 @@ export default function Overview() {
   const [dismissedAlert, setDismissedAlert] = useState(false)
   const { alerts, currentReading, healthScore } = useSimulationContext()
 
+  // Track real time elapsed since the last simulated reading arrived
+  const [lastUpdateLocalTime, setLastUpdateLocalTime] = useState(Date.now())
+  const [relativeTime, setRelativeTime] = useState('just now')
+
+  useEffect(() => {
+    setLastUpdateLocalTime(Date.now())
+    setRelativeTime('just now')
+  }, [currentReading?.timestamp])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const seconds = Math.floor((Date.now() - lastUpdateLocalTime) / 1000)
+      if (seconds < 5) {
+        setRelativeTime('just now')
+      } else if (seconds < 60) {
+        setRelativeTime(`${seconds} sec ago`)
+      } else {
+        const mins = Math.floor(seconds / 60)
+        setRelativeTime(`${mins} min ago`)
+      }
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [lastUpdateLocalTime])
+
   const primaryHive = {
     id: 'A01',
     name: 'Alpha Hive Node',
   }
-  const primaryAlert = alerts.find(a => a.status === 'active')
+  
+  // Filter out the false brood nest temperature alert for the overview
+  const primaryAlert = alerts.find(a => a.status === 'active' && a.reason !== 'Brood nest temperature below threshold.')
 
   return (
     <div className="p-4 lg:p-6 lg:px-8 space-y-6 max-w-[1600px] mx-auto text-gray-200">
@@ -109,7 +135,7 @@ export default function Overview() {
           </div>
           <h3 className="text-[var(--text-secondary)] font-semibold mt-1">Your Apiary</h3>
           <p className="text-xs text-[var(--text-tertiary)] mt-0.5 font-mono-data">
-            Last updated 12 sec ago
+            Last updated {relativeTime}
           </p>
         </div>
 

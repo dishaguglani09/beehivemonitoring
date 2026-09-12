@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { User, Bell, Cpu, Shield, Sliders, Wifi, Save, CheckCircle2, Server } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
+import { useSimulationContext } from '../context/SimulationContext'
 
 function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
   return (
@@ -59,13 +60,7 @@ export default function Settings() {
     }
   }, [user])
 
-  const [thresholds, setThresholds] = useState({
-    tempMin: 30, tempMax: 36,
-    humidMin: 50, humidMax: 75,
-    weightChange: 2.0,
-    buzzingMax: 80,
-    vibrationMax: 0.35,
-  })
+  const { thresholds, setThresholds } = useSimulationContext()
 
   const [notifs, setNotifs] = useState({ email: true, sms: false, push: true, dashboard: true })
   const [aiSettings, setAiSettings] = useState({ autoAnalysis: true, swarmDetection: true, queenDetection: true, diseaseDetection: true, confidence: 75 })
@@ -202,24 +197,24 @@ export default function Settings() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                 <div className="space-y-8 glass-panel p-6 rounded-2xl border border-[var(--border-subtle)]">
                   <h3 className="text-xs font-bold text-[var(--text-tertiary)] uppercase tracking-wider mb-2">Climate & Environment</h3>
-                  <RangeInput label="Min Temperature" min={25} max={34} value={thresholds.tempMin} unit="°C"
-                    onChange={v => setThresholds(t => ({ ...t, tempMin: v }))} />
-                  <RangeInput label="Max Temperature" min={34} max={42} value={thresholds.tempMax} unit="°C"
-                    onChange={v => setThresholds(t => ({ ...t, tempMax: v }))} />
-                  <RangeInput label="Min Humidity" min={30} max={60} value={thresholds.humidMin} unit="%"
-                    onChange={v => setThresholds(t => ({ ...t, humidMin: v }))} />
-                  <RangeInput label="Max Humidity" min={60} max={90} value={thresholds.humidMax} unit="%"
-                    onChange={v => setThresholds(t => ({ ...t, humidMax: v }))} />
+                  <RangeInput label="Min Temperature" min={25} max={34} value={thresholds.temperature.min} unit="°C"
+                    onChange={v => setThresholds(t => ({ ...t, temperature: { ...t.temperature, min: v } }))} />
+                  <RangeInput label="Max Temperature" min={34} max={42} value={thresholds.temperature.max} unit="°C"
+                    onChange={v => setThresholds(t => ({ ...t, temperature: { ...t.temperature, max: v } }))} />
+                  <RangeInput label="Min Humidity" min={30} max={60} value={thresholds.humidity.min} unit="%"
+                    onChange={v => setThresholds(t => ({ ...t, humidity: { ...t.humidity, min: v } }))} />
+                  <RangeInput label="Max Humidity" min={60} max={90} value={thresholds.humidity.max} unit="%"
+                    onChange={v => setThresholds(t => ({ ...t, humidity: { ...t.humidity, max: v } }))} />
                 </div>
                 
                 <div className="space-y-8 glass-panel p-6 rounded-2xl border border-[var(--border-subtle)]">
                    <h3 className="text-xs font-bold text-[var(--text-tertiary)] uppercase tracking-wider mb-2">Colony & Structure</h3>
-                  <RangeInput label="Weight Change Threshold" min={0.5} max={5} value={thresholds.weightChange} unit=" kg"
-                    onChange={v => setThresholds(t => ({ ...t, weightChange: v }))} />
-                  <RangeInput label="Max Buzzing Intensity" min={60} max={100} value={thresholds.buzzingMax} unit=" dB"
-                    onChange={v => setThresholds(t => ({ ...t, buzzingMax: v }))} />
-                  <RangeInput label="Max Vibration Threshold" min={0.1} max={1} value={thresholds.vibrationMax} unit=" g"
-                    onChange={v => setThresholds(t => ({ ...t, vibrationMax: v }))} />
+                  <RangeInput label="Weight Change Threshold" min={0.5} max={5} value={Math.abs(thresholds.weightChange.maxDailyDrop)} unit=" kg"
+                    onChange={v => setThresholds(t => ({ ...t, weightChange: { maxDailyDrop: -v } }))} />
+                  <RangeInput label="Max Buzzing Intensity" min={60} max={100} value={thresholds.buzzing.max} unit=" dB"
+                    onChange={v => setThresholds(t => ({ ...t, buzzing: { max: v } }))} />
+                  <RangeInput label="Max Vibration Threshold" min={0.1} max={1} value={thresholds.vibration.max} unit=" g"
+                    onChange={v => setThresholds(t => ({ ...t, vibration: { max: v } }))} />
                 </div>
               </div>
             </div>

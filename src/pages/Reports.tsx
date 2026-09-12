@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FileText, Download, Share2, RefreshCw, CheckCircle2, Calendar, FileBox } from 'lucide-react'
 import { useSimulationContext } from '../context/SimulationContext'
 
@@ -17,26 +17,114 @@ export default function Reports() {
   const [hive, setHive] = useState('all')
   const [generated, setGenerated] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [dateFrom, setDateFrom] = useState('2026-08-01')
-  const [dateTo, setDateTo] = useState('2026-08-08')
+  const [dateFrom, setDateFrom] = useState('')
+  const [dateTo, setDateTo] = useState('')
+  const [reportData, setReportData] = useState<any>(null)
 
-  const { alerts, healthScore, currentReading } = useSimulationContext()
+  const { alerts, currentReading, dataset, thresholds } = useSimulationContext()
+
+  // Initialize dates based on dataset boundaries once available
+  useEffect(() => {
+    if (dataset && dataset.length > 0 && !dateFrom && !dateTo) {
+      const dates = dataset.map(d => new Date(d.timestamp).getTime())
+      const minDate = new Date(Math.min(...dates))
+      const maxDate = new Date(Math.max(...dates))
+      setDateFrom(minDate.toISOString().split('T')[0])
+      setDateTo(maxDate.toISOString().split('T')[0])
+    }
+  }, [dataset])
 
   const generate = async () => {
     setLoading(true)
-    await new Promise(r => setTimeout(r, 1400))
+    await new Promise(r => setTimeout(r, 600)) // Artificial loading for UX
+
+    const start = new Date(dateFrom).getTime()
+    const end = new Date(dateTo).getTime() + 86400000 // include the end date fully
+
+    const filteredData = dataset.filter(d => {
+      const t = new Date(d.timestamp).getTime()
+      return t >= start && t <= end
+    })
+
+    const filteredAlerts = alerts.filter(a => {
+      const t = new Date(a.time).getTime()
+      return t >= start && t <= end
+    })
+
+    let avgTemp = 0
+    let avgHum = 0
+    let weightDeltaStr = "+0.0"
+    let calcHealth = 100
+
+    if (filteredData.length > 0) {
+      avgTemp = filteredData.reduce((acc, curr) => acc + curr.brood_temp, 0) / filteredData.length
+      avgHum = filteredData.reduce((acc, curr) => acc + curr.humidity, 0) / filteredData.length
+      
+      const firstW = filteredData[0].weight_kg
+      const lastW = filteredData[filteredData.length - 1].weight_kg
+      const delta = lastW - firstW
+      weightDeltaStr = (delta >= 0 ? '+' : '') + delta.toFixed(1)
+      
+      // Calculate average health logic similar to live monitoring based on thresholds
+      let penalty = 0
+      if (avgTemp > thresholds.temperature.max || avgTemp < thresholds.temperature.min) penalty += 15
+      if (avgHum > thresholds.humidity.max || avgHum < thresholds.humidity.min) penalty += 10
+      if (filteredAlerts.length > 0) penalty += 20
+      calcHealth = Math.max(0, 100 - penalty)
+    } else {
+      calcHealth = 0
+    }
+
+    let status = 'Optimal'
+    let statusColor = '#4ade80'
+    if (calcHealth < 75 || filteredAlerts.filter(a => a.severity === 'critical').length > 0) {
+      status = 'Critical'
+      statusColor = '#ef4444'
+    } else if (calcHealth < 90 || filteredAlerts.length > 0) {
+      status = 'Attention'
+      statusColor = '#fbbf24'
+    }
+
+    setReportData({
+      avgHealth: calcHealth.toFixed(1),
+      avgTemp: avgTemp.toFixed(1),
+      avgHum: avgHum.toFixed(0),
+      weightDelta: weightDeltaStr,
+      activeAlerts: filteredAlerts.length, // Include all active alerts in period
+      status,
+      statusColor,
+      hiveName: hive === 'all' ? 'Alpha Hive Node' : `Node ${hive}`
+    })
+
     setLoading(false)
     setGenerated(true)
+  }
+
+  const handleDownloadPdf = () => {
+    window.print()
+  }
+
+  const handleExportCsv = () => {
+    if (!reportData) return
+    const headers = "Identifier,Health Index,Avg Temp,Avg Hum,Weight Delta,Alerts,Status\n"
+    const row = `"${reportData.hiveName}","${reportData.avgHealth}%","${reportData.avgTemp}°C","${reportData.avgHum}%","${reportData.weightDelta} kg","${reportData.activeAlerts}","${reportData.status}"\n`
+    const blob = new Blob([headers + row], { type: 'text/csv' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `SmartHive_Report_${dateFrom}_${dateTo}.csv`
+    a.click()
+    URL.revokeObjectURL(url)
   }
 
   const rt = reportTypes.find(r => r.id === reportType)
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 print:m-0 print:p-0 print:space-y-0">
 
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 print:block print:w-full">
         {/* Configuration */}
-        <div className="glass-panel border border-[var(--border-subtle)] p-6 rounded-3xl h-fit">
+        <div className="glass-panel border border-[var(--border-subtle)] p-6 rounded-3xl h-fit print:hidden">
           <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[var(--border-subtle)]">
             <div className="p-2 bg-[#fbbf24]/10 rounded-lg text-[#fbbf24]">
               <FileBox size={18} />
@@ -128,17 +216,17 @@ export default function Reports() {
               <div className="p-8 space-y-8 relative z-10">
                 {/* Summary */}
                 <div>
-                  <h4 className="font-display font-bold text-[var(--text-primary)] text-lg tracking-wide mb-4">Executive Summary</h4>
+                  <h4 className="font-display font-bold text-[var(--text-primary)] text-lg tracking-wide mb-4 print:text-black">Executive Summary</h4>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     {[
-                      { label: 'Avg Health Score', value: `${healthScore.toFixed(1)}%`, color: '#4ade80', glow: 'rgba(74,222,128,0.1)' },
-                      { label: 'Avg Temperature', value: `${currentReading?.brood_temp.toFixed(1)}°C`, color: '#fbbf24', glow: 'rgba(251,191,36,0.1)' },
-                      { label: 'Total Weight Δ', value: '+2.4 kg', color: '#a78bfa', glow: 'rgba(167,139,250,0.1)' },
-                      { label: 'Active Alerts', value: `${alerts.filter(a => a.status === 'active').length}`, color: '#ef4444', glow: 'rgba(239,68,68,0.1)' },
+                      { label: 'Avg Health Score', value: `${reportData.avgHealth}%`, color: '#4ade80', glow: 'rgba(74,222,128,0.1)', printColor: 'text-green-600' },
+                      { label: 'Avg Temperature', value: `${reportData.avgTemp}°C`, color: '#fbbf24', glow: 'rgba(251,191,36,0.1)', printColor: 'text-orange-500' },
+                      { label: 'Total Weight Δ', value: `${reportData.weightDelta} kg`, color: '#a78bfa', glow: 'rgba(167,139,250,0.1)', printColor: 'text-purple-600' },
+                      { label: 'Active Alerts', value: `${reportData.activeAlerts}`, color: '#ef4444', glow: 'rgba(239,68,68,0.1)', printColor: 'text-red-600' },
                     ].map(s => (
-                      <div key={s.label} className="bg-[var(--bg-input)] rounded-2xl p-4 border border-[var(--border-subtle)] shadow-inner" style={{ boxShadow: `inset 0 0 20px ${s.glow}` }}>
-                        <div className="font-mono-data text-2xl font-bold tracking-wide" style={{ color: s.color }}>{s.value}</div>
-                        <div className="text-[var(--text-tertiary)] text-[10px] font-bold uppercase tracking-widest mt-1">{s.label}</div>
+                      <div key={s.label} className="bg-[var(--bg-input)] rounded-2xl p-4 border border-[var(--border-subtle)] shadow-inner print:shadow-none print:border-gray-300 print:bg-white" style={{ boxShadow: `inset 0 0 20px ${s.glow}` }}>
+                        <div className={`font-mono-data text-2xl font-bold tracking-wide print:!text-black`} style={{ color: s.color }}>{s.value}</div>
+                        <div className="text-[var(--text-tertiary)] text-[10px] font-bold uppercase tracking-widest mt-1 print:text-gray-500">{s.label}</div>
                       </div>
                     ))}
                   </div>
@@ -146,29 +234,29 @@ export default function Reports() {
 
                 {/* Hive summary table */}
                 <div>
-                  <h4 className="font-display font-bold text-[var(--text-primary)] text-lg tracking-wide mb-4">Node Performance Index</h4>
-                  <div className="overflow-x-auto bg-[var(--bg-input)] rounded-2xl border border-[var(--border-subtle)]">
+                  <h4 className="font-display font-bold text-[var(--text-primary)] text-lg tracking-wide mb-4 print:text-black">Node Performance Index</h4>
+                  <div className="overflow-x-auto bg-[var(--bg-input)] rounded-2xl border border-[var(--border-subtle)] print:bg-white print:border-gray-300 print:shadow-none">
                     <table className="w-full text-sm">
-                      <thead className="bg-[var(--bg-card-hover)]">
+                      <thead className="bg-[var(--bg-card-hover)] print:bg-gray-100">
                         <tr>
                           {['Identifier', 'Health Index', 'Avg Temp', 'Avg Hum', 'Weight Δ', 'Alerts', 'Status'].map(h => (
-                            <th key={h} className="text-left py-3 px-4 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">{h}</th>
+                            <th key={h} className="text-left py-3 px-4 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] print:text-gray-600">{h}</th>
                           ))}
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-white/5">
+                      <tbody className="divide-y divide-white/5 print:divide-gray-200">
                         {[
-                          { name: 'Alpha Hive Node', health: `${healthScore.toFixed(0)}%`, temp: `${currentReading?.brood_temp.toFixed(1)}°C`, hum: `${currentReading?.humidity.toFixed(0)}%`, weight: '+2.4 kg', alerts: alerts.filter(a => a.status === 'active').length, status: healthScore >= 80 ? 'Optimal' : 'Attention', sc: healthScore >= 80 ? '#4ade80' : '#fbbf24' },
+                          { name: reportData.hiveName, health: `${reportData.avgHealth}%`, temp: `${reportData.avgTemp}°C`, hum: `${reportData.avgHum}%`, weight: `${reportData.weightDelta} kg`, alerts: reportData.activeAlerts, status: reportData.status, sc: reportData.statusColor },
                         ].map(r => (
-                          <tr key={r.name} className="hover:bg-[var(--bg-card-hover)] transition-colors">
-                            <td className="py-3 px-4 font-bold text-[var(--text-primary)]">{r.name}</td>
-                            <td className="py-3 px-4 font-mono-data font-bold tracking-wide" style={{ color: r.sc }}>{r.health}</td>
-                            <td className="py-3 px-4 font-mono-data font-bold text-[var(--text-secondary)]">{r.temp}</td>
-                            <td className="py-3 px-4 font-mono-data font-bold text-[var(--text-secondary)]">{r.hum}</td>
-                            <td className="py-3 px-4 font-mono-data font-bold" style={{ color: r.weight.startsWith('+') ? '#4ade80' : '#ef4444' }}>{r.weight}</td>
-                            <td className="py-3 px-4 font-mono-data font-bold text-[var(--text-secondary)]">{r.alerts}</td>
+                          <tr key={r.name} className="hover:bg-[var(--bg-card-hover)] transition-colors print:bg-white">
+                            <td className="py-3 px-4 font-bold text-[var(--text-primary)] print:text-black">{r.name}</td>
+                            <td className="py-3 px-4 font-mono-data font-bold tracking-wide print:!text-black" style={{ color: r.sc }}>{r.health}</td>
+                            <td className="py-3 px-4 font-mono-data font-bold text-[var(--text-secondary)] print:text-black">{r.temp}</td>
+                            <td className="py-3 px-4 font-mono-data font-bold text-[var(--text-secondary)] print:text-black">{r.hum}</td>
+                            <td className="py-3 px-4 font-mono-data font-bold print:!text-black" style={{ color: r.weight.startsWith('+') ? '#4ade80' : '#ef4444' }}>{r.weight}</td>
+                            <td className="py-3 px-4 font-mono-data font-bold text-[var(--text-secondary)] print:text-black">{r.alerts}</td>
                             <td className="py-3 px-4">
-                              <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest" style={{ color: r.sc, backgroundColor: `${r.sc}15`, border: `1px solid ${r.sc}30` }}>{r.status}</span>
+                              <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest print:border print:border-gray-400 print:!text-black print:!bg-transparent" style={{ color: r.sc, backgroundColor: `${r.sc}15`, border: `1px solid ${r.sc}30` }}>{r.status}</span>
                             </td>
                           </tr>
                         ))}
@@ -178,11 +266,11 @@ export default function Reports() {
                 </div>
 
                 {/* Actions */}
-                <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-[var(--border-subtle)]">
-                  <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#fbbf24] hover:bg-[#fbbf24]/90 text-[var(--bg-main)] text-xs font-bold uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(251,191,36,0.3)]">
+                <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-[var(--border-subtle)] print:hidden">
+                  <button onClick={handleDownloadPdf} className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#fbbf24] hover:bg-[#fbbf24]/90 text-[var(--bg-main)] text-xs font-bold uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(251,191,36,0.3)]">
                     <Download size={16} /> Download PDF
                   </button>
-                  <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--bg-card-hover)] hover:bg-[var(--bg-card-hover)] border border-[var(--border-subtle)] text-[var(--text-primary)] text-xs font-bold uppercase tracking-wider transition-all">
+                  <button onClick={handleExportCsv} className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--bg-card-hover)] hover:bg-[var(--bg-card-hover)] border border-[var(--border-subtle)] text-[var(--text-primary)] text-xs font-bold uppercase tracking-wider transition-all">
                     <Download size={16} className="text-[var(--text-tertiary)]" /> Export CSV
                   </button>
                   <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--bg-card-hover)] hover:bg-[var(--bg-card-hover)] border border-[var(--border-subtle)] text-[var(--text-primary)] text-xs font-bold uppercase tracking-wider transition-all ml-auto">

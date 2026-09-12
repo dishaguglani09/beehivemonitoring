@@ -28,7 +28,7 @@ const sampleDetections = [
 ]
 
 export default function Camera() {
-  const [selectedHive, setSelectedHive] = useState(hives[0].id)
+  const [selectedHive, setSelectedHive] = useState(hives[0]?.id || 'A01')
   const [isPlaying, setIsPlaying] = useState(true)
   const [showOverlays, setShowOverlays] = useState(true)
   const [showHeatmap, setShowHeatmap] = useState(false)
@@ -61,7 +61,7 @@ export default function Camera() {
     setTimeout(() => setSnapshotTaken(false), 2000)
   }
 
-  const activeHiveObj = hives.find(h => h.id === selectedHive) || hives[0]
+  const activeHiveObj = hives.find(h => h.id === selectedHive) || hives[0] || { id: 'A01', name: 'Alpha Hive Node', location: 'Apiary 1' }
 
   return (
     <div className="space-y-6">

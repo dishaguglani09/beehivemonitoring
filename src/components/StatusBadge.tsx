@@ -42,42 +42,42 @@ export default function StatusBadge({
     bg = 'rgba(74, 222, 128, 0.1)'
     border = 'rgba(74, 222, 128, 0.2)'
     shadow = '0 0 10px rgba(74, 222, 128, 0.1)'
-    defaultLabel = '✓ NORMAL'
+    defaultLabel = 'NORMAL'
     Icon = CheckCircle2
   } else if (normStatus === 'attention' || normStatus === 'warning' || normStatus === 'monitor') {
     color = '#fbbf24'
     bg = 'rgba(251, 191, 36, 0.1)'
     border = 'rgba(251, 191, 36, 0.2)'
     shadow = '0 0 10px rgba(251, 191, 36, 0.1)'
-    defaultLabel = '⚠ ATTENTION'
+    defaultLabel = 'ATTENTION'
     Icon = AlertTriangle
   } else if (normStatus === 'critical' || normStatus === 'danger' || normStatus === 'urgent') {
     color = '#ef4444'
     bg = 'rgba(239, 68, 68, 0.1)'
     border = 'rgba(239, 68, 68, 0.2)'
     shadow = '0 0 10px rgba(239, 68, 68, 0.1)'
-    defaultLabel = '● CRITICAL'
+    defaultLabel = 'CRITICAL'
     Icon = AlertCircle
   } else if (normStatus === 'ai' || normStatus === 'ai-insight' || normStatus === 'ai insight') {
     color = '#a78bfa'
     bg = 'rgba(167, 139, 250, 0.1)'
     border = 'rgba(167, 139, 250, 0.3)'
     shadow = '0 0 10px rgba(167, 139, 250, 0.2)'
-    defaultLabel = '✦ AI INSIGHT'
+    defaultLabel = 'AI INSIGHT'
     Icon = Sparkles
   } else if (normStatus === 'live' || normStatus === 'online') {
     color = '#4ade80'
     bg = 'rgba(74, 222, 128, 0.1)'
     border = 'rgba(74, 222, 128, 0.2)'
     shadow = '0 0 10px rgba(74, 222, 128, 0.1)'
-    defaultLabel = '● LIVE'
+    defaultLabel = 'LIVE'
     Icon = Radio
   } else if (normStatus === 'info' || normStatus === 'resolved') {
     color = '#60a5fa'
     bg = 'rgba(96, 165, 250, 0.1)'
     border = 'rgba(96, 165, 250, 0.2)'
     shadow = '0 0 10px rgba(96, 165, 250, 0.1)'
-    defaultLabel = 'ℹ INFO'
+    defaultLabel = 'INFO'
     Icon = Info
   } else {
     color = 'rgba(255, 255, 255, 0.6)'
