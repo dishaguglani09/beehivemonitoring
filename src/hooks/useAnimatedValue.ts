@@ -8,7 +8,7 @@ const easeOutCubic = (t: number): number => {
 export default function useAnimatedValue(targetValue: number, duration: number = 2000): [number, boolean] {
   const [currentValue, setCurrentValue] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true); // Start animating by default since we animate from 0
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number>(0);
   const startTimeRef = useRef<number | null>(null);
   const startValueRef = useRef(0);
   const isAnimatingRef = useRef(false);

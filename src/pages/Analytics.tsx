@@ -85,7 +85,7 @@ export default function Analytics() {
       color: '#a78bfa',
       gradient: ['#a78bfa', '#8b5cf6'],
       unit: 'kg',
-      data: weightHistory.map(w => ({ time: w.time, value: w.value })),
+      data: weightHistory.map(w => ({ time: w.date, value: w.value })),
       minRef: 35,
       maxRef: 50,
       refLabel: 'Harvestable Baseline (45 kg)',

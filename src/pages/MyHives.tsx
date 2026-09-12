@@ -47,8 +47,6 @@ function HealthRing({ score, finalScore, size = 56 }: { score: number; finalScor
   )
 }
 
-}
-
 export default function MyHives() {
   const { currentReading, currentSwarmEvent, weightDelta } = useSimulationContext()
   const navigate = useNavigate()
@@ -113,7 +111,7 @@ export default function MyHives() {
   const matchesSearch = hive.name.toLowerCase().includes(search.toLowerCase()) || hive.location.toLowerCase().includes(search.toLowerCase())
   const matchesFilter = statusFilter === 'all' || 
                         (statusFilter === 'healthy' && status === 'healthy') ||
-                        (statusFilter === 'attention' && (status === 'attention' || status === 'warning')) ||
+                        (statusFilter === 'attention' && status === 'attention') ||
                         (statusFilter === 'critical' && status === 'critical')
   
   const showHive = matchesSearch && matchesFilter;

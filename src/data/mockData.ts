@@ -1,4 +1,4 @@
-export const hives = [];
+export const hives: any[] = [];
 
 export const temperatureHistory = [
   { time: '00:00', value: 32.4 }, { time: '02:00', value: 32.1 },
@@ -73,4 +73,4 @@ export const weeklyWeight = Array.from({ length: 28 }, (_, i) => ({
   value: 40.0 + i * 0.1 + Math.sin(i * 0.5) * 0.3,
 }));
 
-export const alerts = [];
+export const alerts: any[] = [];

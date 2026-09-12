@@ -144,8 +144,8 @@ export default function useSimulation(): SimulationState & SimulationControls {
 
   const healthScore = useMemo(() => {
     let score = 100
-    if (currentReading.brood_temp < THRESHOLDS.temperature.min || currentReading.brood_temp > THRESHOLDS.temperature.max) score -= 15
-    if (currentReading.humidity < THRESHOLDS.humidity.min || currentReading.humidity > THRESHOLDS.humidity.max) score -= 10
+    if (currentReading.brood_temp < DEFAULT_THRESHOLDS.temperature.min || currentReading.brood_temp > DEFAULT_THRESHOLDS.temperature.max) score -= 15
+    if (currentReading.humidity < DEFAULT_THRESHOLDS.humidity.min || currentReading.humidity > DEFAULT_THRESHOLDS.humidity.max) score -= 10
     if (currentSwarmEvent) score -= 40
     return Math.max(0, score)
   }, [currentReading.brood_temp, currentReading.humidity, currentSwarmEvent])
