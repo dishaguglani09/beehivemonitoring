@@ -3,3 +3,6 @@ dist/
 .env
 .env.*
 !.env.example
+ml_model/.venv/
+ml_model/__pycache__/
+ml_model/*.joblib

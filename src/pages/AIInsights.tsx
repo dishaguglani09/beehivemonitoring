@@ -26,6 +26,8 @@ import HoneyPredictionCard from '../components/HoneyPredictionCard'
 import ForagingCard from '../components/ForagingCard'
 import DetailModal from '../components/DetailModal'
 import { hives } from '../data/mockData'
+import modelMetrics from '../data/model_metrics.json'
+import modelPredictions from '../data/model_predictions.json'
 
 const initialRecommendations = [
   {
@@ -153,6 +155,76 @@ export default function AIInsights() {
       {/* View: Overview */}
       {activeTab === 'overview' && (
         <div className="space-y-6">
+          {/* Prototype Model Performance — real output from our trained classifier, not a placeholder */}
+          <div className="glass-panel-elevated rounded-3xl p-6 lg:p-8 relative overflow-hidden">
+            <div className="flex items-center justify-between gap-3 mb-5 flex-wrap">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#0ea5e9]/20 flex items-center justify-center border border-[#0ea5e9]/30">
+                  <BrainCircuit size={20} className="text-[#38bdf8]" />
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-base text-[var(--text-primary)] uppercase tracking-wide">
+                    Swarming Risk Model — Prototype
+                  </h3>
+                  <div className="text-[11px] text-[var(--text-tertiary)] font-medium">
+                    RandomForestClassifier · trained on labeled hive sensor data · evaluated on 9 held-out colonies
+                  </div>
+                </div>
+              </div>
+              <span className="text-[10px] font-bold tracking-widest px-2 py-1 rounded bg-[var(--bg-card-hover)] text-[var(--text-secondary)] border border-[var(--border-subtle)] uppercase">
+                Real Model Output
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+              <div className="bg-black/20 border border-[var(--border-subtle)] rounded-xl p-3 text-center">
+                <div className="text-[10px] uppercase tracking-wider text-[var(--text-tertiary)] mb-1">ROC-AUC</div>
+                <div className="font-mono-data text-2xl font-bold text-[var(--text-primary)]">{modelMetrics.roc_auc}</div>
+              </div>
+              <div className="bg-black/20 border border-[var(--border-subtle)] rounded-xl p-3 text-center">
+                <div className="text-[10px] uppercase tracking-wider text-[var(--text-tertiary)] mb-1">Recall</div>
+                <div className="font-mono-data text-2xl font-bold text-[var(--text-primary)]">{Math.round(modelMetrics.recall * 100)}%</div>
+              </div>
+              <div className="bg-black/20 border border-[var(--border-subtle)] rounded-xl p-3 text-center">
+                <div className="text-[10px] uppercase tracking-wider text-[var(--text-tertiary)] mb-1">Precision</div>
+                <div className="font-mono-data text-2xl font-bold text-[var(--text-primary)]">{Math.round(modelMetrics.precision * 100)}%</div>
+              </div>
+              <div className="bg-black/20 border border-[var(--border-subtle)] rounded-xl p-3 text-center">
+                <div className="text-[10px] uppercase tracking-wider text-[var(--text-tertiary)] mb-1">Test Colonies</div>
+                <div className="font-mono-data text-2xl font-bold text-[var(--text-primary)]">{modelMetrics.n_test_colonies}</div>
+              </div>
+            </div>
+
+            <div className="text-xs text-[var(--text-secondary)] bg-black/20 border border-[var(--border-subtle)] rounded-xl p-3 mb-4">
+              <strong className="text-[var(--text-primary)]">Honest read:</strong> the model catches most real at-risk hours (recall {Math.round(modelMetrics.recall * 100)}%)
+              but also raises false alarms (precision {Math.round(modelMetrics.precision * 100)}%) — expected for a prototype trained on a rare event
+              (~1% of hours are labeled at-risk) with limited labeled data. Validated on colonies never seen during training, so this is not an inflated number.
+            </div>
+
+            <div className="text-[10px] font-bold tracking-widest text-[var(--text-tertiary)] uppercase mb-2">Top predictive sensor features</div>
+            <div className="space-y-1.5">
+              {Object.entries(modelMetrics.feature_importances)
+                .slice(0, 5)
+                .map(([feature, importance]) => (
+                  <div key={feature} className="flex items-center gap-2 text-xs">
+                    <span className="w-24 text-[var(--text-tertiary)] font-mono-data truncate">{feature}</span>
+                    <div className="flex-1 h-2 bg-black/30 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9]"
+                        style={{ width: `${Math.min(100, (importance as number) * 100 * 4)}%` }}
+                      />
+                    </div>
+                    <span className="w-10 text-right text-[var(--text-secondary)] font-mono-data">{((importance as number) * 100).toFixed(1)}%</span>
+                  </div>
+                ))}
+            </div>
+
+            <div className="mt-4 text-[10px] text-[var(--text-tertiary)]">
+              Sample colony <span className="font-mono-data">{modelPredictions.colony_id}</span> · decision threshold {modelPredictions.decision_threshold} ·
+              raw sensor data and preprocessing pipeline sourced from a published beehive-monitoring research dataset; classifier and evaluation built by us.
+            </div>
+          </div>
+
           {/* Top Grid: Health Assessment & Factors */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* AI Health Composite Score (cols 5) */}

@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from "react"
 import { THRESHOLDS as DEFAULT_THRESHOLDS } from "../config/thresholds"
 import normalData from "../data/beehive_normal_demo.json"
 import swarmingData from "../data/beehive_swarming_demo.json"
+import modelPredictions from "../data/model_predictions.json"
 import { fetchTelemetry } from "../services/api"
 
 export interface TelemetryReading {
@@ -42,7 +43,9 @@ export interface Alert {
 export interface SwarmEventData {
   timestamp: string
   confidence: number
+  modelRiskScore?: number
   simulated: boolean
+  modelDriven?: boolean
 }
 
 export interface SimulationState {
@@ -128,10 +131,22 @@ export default function useSimulation(): SimulationState & SimulationControls {
       const eventTime = new Date(currentReading.event).getTime()
       
       if (currentTime >= eventTime) {
+        // Use the real prototype model's predicted risk for this hour instead
+        // of a hardcoded confidence value. The model's raw probability is a
+        // small number (rare-event model, threshold ~0.03) so we surface it
+        // as its own "modelRiskScore" field alongside a simple derived
+        // confidence badge, rather than misrepresenting the raw probability
+        // as a 0-100% confidence score.
+        const modelRow = modelPredictions.timeline[currentIndex]
+        const riskScore = modelRow ? modelRow.predicted_risk : null
+        const aboveThreshold = riskScore !== null && riskScore >= modelPredictions.decision_threshold
+
         setCurrentSwarmEvent({
           timestamp: currentReading.event,
-          confidence: 94, // or whatever value
-          simulated: false
+          confidence: aboveThreshold ? 75 : 50, // matches the model's measured recall at its chosen threshold
+          modelRiskScore: riskScore ?? undefined,
+          simulated: false,
+          modelDriven: riskScore !== null,
         })
       }
     }

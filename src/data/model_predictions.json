@@ -1,0 +1,1608 @@
+{
+  "colony_id": "97_2021-06-25 091320",
+  "model": "RandomForestClassifier (prototype)",
+  "note": "Predicted risk is this model's own output on a held-out colony it never saw during training.",
+  "decision_threshold": 0.0297,
+  "timeline": [
+    {
+      "timestamp": "2021-06-12 06:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 26.96,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0331
+    },
+    {
+      "timestamp": "2021-06-12 07:00:00",
+      "brood_temp_max": 35.37,
+      "weight_kg": 26.92,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0364
+    },
+    {
+      "timestamp": "2021-06-12 08:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 26.83,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0498
+    },
+    {
+      "timestamp": "2021-06-12 09:00:00",
+      "brood_temp_max": 35.46,
+      "weight_kg": 26.79,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0398
+    },
+    {
+      "timestamp": "2021-06-12 10:00:00",
+      "brood_temp_max": 35.53,
+      "weight_kg": 26.75,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.053
+    },
+    {
+      "timestamp": "2021-06-12 11:00:00",
+      "brood_temp_max": 35.66,
+      "weight_kg": 26.79,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0497
+    },
+    {
+      "timestamp": "2021-06-12 12:00:00",
+      "brood_temp_max": 35.59,
+      "weight_kg": 26.82,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0431
+    },
+    {
+      "timestamp": "2021-06-12 13:00:00",
+      "brood_temp_max": 35.57,
+      "weight_kg": 26.84,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0331
+    },
+    {
+      "timestamp": "2021-06-12 14:00:00",
+      "brood_temp_max": 35.5,
+      "weight_kg": 26.85,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0298
+    },
+    {
+      "timestamp": "2021-06-12 15:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 26.85,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0199
+    },
+    {
+      "timestamp": "2021-06-12 16:00:00",
+      "brood_temp_max": 35.33,
+      "weight_kg": 26.84,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0262
+    },
+    {
+      "timestamp": "2021-06-12 17:00:00",
+      "brood_temp_max": 35.4,
+      "weight_kg": 26.84,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-12 18:00:00",
+      "brood_temp_max": 35.26,
+      "weight_kg": 26.81,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0328
+    },
+    {
+      "timestamp": "2021-06-12 19:00:00",
+      "brood_temp_max": 35.25,
+      "weight_kg": 26.81,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0299
+    },
+    {
+      "timestamp": "2021-06-12 20:00:00",
+      "brood_temp_max": 35.36,
+      "weight_kg": 26.82,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0299
+    },
+    {
+      "timestamp": "2021-06-12 21:00:00",
+      "brood_temp_max": 35.36,
+      "weight_kg": 26.83,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0299
+    },
+    {
+      "timestamp": "2021-06-12 22:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 26.84,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-12 23:00:00",
+      "brood_temp_max": 35.51,
+      "weight_kg": 26.85,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0295
+    },
+    {
+      "timestamp": "2021-06-13 00:00:00",
+      "brood_temp_max": 35.43,
+      "weight_kg": 26.87,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-13 01:00:00",
+      "brood_temp_max": 35.38,
+      "weight_kg": 26.87,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0298
+    },
+    {
+      "timestamp": "2021-06-13 02:00:00",
+      "brood_temp_max": 35.44,
+      "weight_kg": 26.88,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0298
+    },
+    {
+      "timestamp": "2021-06-13 03:00:00",
+      "brood_temp_max": 35.4,
+      "weight_kg": 26.88,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-13 04:00:00",
+      "brood_temp_max": 35.45,
+      "weight_kg": 26.88,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0331
+    },
+    {
+      "timestamp": "2021-06-13 05:00:00",
+      "brood_temp_max": 35.48,
+      "weight_kg": 26.86,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-13 06:00:00",
+      "brood_temp_max": 35.49,
+      "weight_kg": 26.79,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0266
+    },
+    {
+      "timestamp": "2021-06-13 07:00:00",
+      "brood_temp_max": 35.45,
+      "weight_kg": 26.7,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0364
+    },
+    {
+      "timestamp": "2021-06-13 08:00:00",
+      "brood_temp_max": 35.48,
+      "weight_kg": 26.65,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0464
+    },
+    {
+      "timestamp": "2021-06-13 09:00:00",
+      "brood_temp_max": 35.51,
+      "weight_kg": 26.62,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0432
+    },
+    {
+      "timestamp": "2021-06-13 10:00:00",
+      "brood_temp_max": 35.49,
+      "weight_kg": 26.6,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0399
+    },
+    {
+      "timestamp": "2021-06-13 11:00:00",
+      "brood_temp_max": 35.48,
+      "weight_kg": 26.54,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0496
+    },
+    {
+      "timestamp": "2021-06-13 12:00:00",
+      "brood_temp_max": 35.56,
+      "weight_kg": 26.43,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0462
+    },
+    {
+      "timestamp": "2021-06-13 13:00:00",
+      "brood_temp_max": 35.64,
+      "weight_kg": 26.41,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0553
+    },
+    {
+      "timestamp": "2021-06-13 14:00:00",
+      "brood_temp_max": 35.81,
+      "weight_kg": 26.47,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.049
+    },
+    {
+      "timestamp": "2021-06-13 15:00:00",
+      "brood_temp_max": 35.29,
+      "weight_kg": 26.48,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0427
+    },
+    {
+      "timestamp": "2021-06-13 16:00:00",
+      "brood_temp_max": 35.23,
+      "weight_kg": 26.51,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0393
+    },
+    {
+      "timestamp": "2021-06-13 17:00:00",
+      "brood_temp_max": 35.38,
+      "weight_kg": 26.59,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0362
+    },
+    {
+      "timestamp": "2021-06-13 18:00:00",
+      "brood_temp_max": 35.43,
+      "weight_kg": 26.65,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0296
+    },
+    {
+      "timestamp": "2021-06-14 04:00:00",
+      "brood_temp_max": 35.5,
+      "weight_kg": 26.69,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0361
+    },
+    {
+      "timestamp": "2021-06-14 05:00:00",
+      "brood_temp_max": 35.44,
+      "weight_kg": 26.6,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0331
+    },
+    {
+      "timestamp": "2021-06-14 06:00:00",
+      "brood_temp_max": 35.39,
+      "weight_kg": 26.51,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0297
+    },
+    {
+      "timestamp": "2021-06-14 07:00:00",
+      "brood_temp_max": 35.27,
+      "weight_kg": 26.4,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0296
+    },
+    {
+      "timestamp": "2021-06-14 08:00:00",
+      "brood_temp_max": 35.48,
+      "weight_kg": 26.37,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0363
+    },
+    {
+      "timestamp": "2021-06-14 09:00:00",
+      "brood_temp_max": 35.58,
+      "weight_kg": 26.4,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0363
+    },
+    {
+      "timestamp": "2021-06-14 10:00:00",
+      "brood_temp_max": 35.5,
+      "weight_kg": 26.41,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0395
+    },
+    {
+      "timestamp": "2021-06-14 11:00:00",
+      "brood_temp_max": 35.57,
+      "weight_kg": 26.4,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0426
+    },
+    {
+      "timestamp": "2021-06-14 12:00:00",
+      "brood_temp_max": 35.62,
+      "weight_kg": 26.24,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0032
+    },
+    {
+      "timestamp": "2021-06-14 13:00:00",
+      "brood_temp_max": 35.57,
+      "weight_kg": 26.2,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0095
+    },
+    {
+      "timestamp": "2021-06-14 14:00:00",
+      "brood_temp_max": 35.5,
+      "weight_kg": 26.31,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0032
+    },
+    {
+      "timestamp": "2021-06-14 15:00:00",
+      "brood_temp_max": 35.44,
+      "weight_kg": 26.43,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0328
+    },
+    {
+      "timestamp": "2021-06-14 16:00:00",
+      "brood_temp_max": 35.4,
+      "weight_kg": 26.49,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.039
+    },
+    {
+      "timestamp": "2021-06-14 17:00:00",
+      "brood_temp_max": 35.34,
+      "weight_kg": 26.63,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.036
+    },
+    {
+      "timestamp": "2021-06-14 18:00:00",
+      "brood_temp_max": 35.33,
+      "weight_kg": 26.74,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0426
+    },
+    {
+      "timestamp": "2021-06-14 19:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 26.77,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0362
+    },
+    {
+      "timestamp": "2021-06-14 20:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 26.78,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0327
+    },
+    {
+      "timestamp": "2021-06-14 21:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 26.78,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0295
+    },
+    {
+      "timestamp": "2021-06-14 22:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 26.79,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0232
+    },
+    {
+      "timestamp": "2021-06-14 23:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 26.81,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0295
+    },
+    {
+      "timestamp": "2021-06-15 00:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 26.81,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0295
+    },
+    {
+      "timestamp": "2021-06-15 01:00:00",
+      "brood_temp_max": 35.3,
+      "weight_kg": 26.81,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0265
+    },
+    {
+      "timestamp": "2021-06-15 02:00:00",
+      "brood_temp_max": 35.26,
+      "weight_kg": 26.81,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0295
+    },
+    {
+      "timestamp": "2021-06-15 03:00:00",
+      "brood_temp_max": 35.26,
+      "weight_kg": 26.8,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0265
+    },
+    {
+      "timestamp": "2021-06-15 04:00:00",
+      "brood_temp_max": 35.44,
+      "weight_kg": 26.72,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0298
+    },
+    {
+      "timestamp": "2021-06-15 05:00:00",
+      "brood_temp_max": 35.4,
+      "weight_kg": 26.67,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0331
+    },
+    {
+      "timestamp": "2021-06-15 06:00:00",
+      "brood_temp_max": 35.44,
+      "weight_kg": 26.63,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0265
+    },
+    {
+      "timestamp": "2021-06-15 07:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 26.54,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0331
+    },
+    {
+      "timestamp": "2021-06-15 08:00:00",
+      "brood_temp_max": 35.48,
+      "weight_kg": 26.49,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0398
+    },
+    {
+      "timestamp": "2021-06-15 09:00:00",
+      "brood_temp_max": 35.5,
+      "weight_kg": 26.44,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0465
+    },
+    {
+      "timestamp": "2021-06-15 10:00:00",
+      "brood_temp_max": 35.47,
+      "weight_kg": 26.4,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0461
+    },
+    {
+      "timestamp": "2021-06-15 11:00:00",
+      "brood_temp_max": 35.53,
+      "weight_kg": 26.39,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.039
+    },
+    {
+      "timestamp": "2021-06-15 12:00:00",
+      "brood_temp_max": 35.45,
+      "weight_kg": 26.4,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0391
+    },
+    {
+      "timestamp": "2021-06-15 13:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 26.4,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0426
+    },
+    {
+      "timestamp": "2021-06-15 14:00:00",
+      "brood_temp_max": 35.43,
+      "weight_kg": 26.36,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0426
+    },
+    {
+      "timestamp": "2021-06-15 15:00:00",
+      "brood_temp_max": 35.33,
+      "weight_kg": 26.44,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0395
+    },
+    {
+      "timestamp": "2021-06-15 16:00:00",
+      "brood_temp_max": 35.25,
+      "weight_kg": 26.5,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0394
+    },
+    {
+      "timestamp": "2021-06-15 17:00:00",
+      "brood_temp_max": 35.23,
+      "weight_kg": 26.53,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0528
+    },
+    {
+      "timestamp": "2021-06-15 18:00:00",
+      "brood_temp_max": 35.23,
+      "weight_kg": 26.55,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0394
+    },
+    {
+      "timestamp": "2021-06-15 19:00:00",
+      "brood_temp_max": 35.2,
+      "weight_kg": 26.55,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0327
+    },
+    {
+      "timestamp": "2021-06-15 20:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 26.55,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.033
+    },
+    {
+      "timestamp": "2021-06-15 21:00:00",
+      "brood_temp_max": 35.42,
+      "weight_kg": 26.57,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.033
+    },
+    {
+      "timestamp": "2021-06-15 22:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 26.6,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0362
+    },
+    {
+      "timestamp": "2021-06-15 23:00:00",
+      "brood_temp_max": 35.4,
+      "weight_kg": 26.63,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0362
+    },
+    {
+      "timestamp": "2021-06-16 00:00:00",
+      "brood_temp_max": 35.28,
+      "weight_kg": 26.65,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0361
+    },
+    {
+      "timestamp": "2021-06-16 01:00:00",
+      "brood_temp_max": 35.3,
+      "weight_kg": 26.65,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0331
+    },
+    {
+      "timestamp": "2021-06-16 02:00:00",
+      "brood_temp_max": 35.27,
+      "weight_kg": 26.67,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0297
+    },
+    {
+      "timestamp": "2021-06-16 03:00:00",
+      "brood_temp_max": 35.38,
+      "weight_kg": 26.68,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0298
+    },
+    {
+      "timestamp": "2021-06-16 04:00:00",
+      "brood_temp_max": 35.43,
+      "weight_kg": 26.68,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-16 05:00:00",
+      "brood_temp_max": 35.45,
+      "weight_kg": 26.64,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-16 06:00:00",
+      "brood_temp_max": 35.37,
+      "weight_kg": 26.53,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0298
+    },
+    {
+      "timestamp": "2021-06-16 07:00:00",
+      "brood_temp_max": 35.32,
+      "weight_kg": 26.39,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.043
+    },
+    {
+      "timestamp": "2021-06-16 08:00:00",
+      "brood_temp_max": 35.51,
+      "weight_kg": 26.31,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0033
+    },
+    {
+      "timestamp": "2021-06-16 09:00:00",
+      "brood_temp_max": 35.51,
+      "weight_kg": 26.27,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0
+    },
+    {
+      "timestamp": "2021-06-16 10:00:00",
+      "brood_temp_max": 35.51,
+      "weight_kg": 26.24,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0063
+    },
+    {
+      "timestamp": "2021-06-16 11:00:00",
+      "brood_temp_max": 35.55,
+      "weight_kg": 26.23,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-16 12:00:00",
+      "brood_temp_max": 35.79,
+      "weight_kg": 26.1,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0032
+    },
+    {
+      "timestamp": "2021-06-16 13:00:00",
+      "brood_temp_max": 35.88,
+      "weight_kg": 25.92,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0096
+    },
+    {
+      "timestamp": "2021-06-16 14:00:00",
+      "brood_temp_max": 35.8,
+      "weight_kg": 26.0,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0032
+    },
+    {
+      "timestamp": "2021-06-16 15:00:00",
+      "brood_temp_max": 35.56,
+      "weight_kg": 26.11,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-16 16:00:00",
+      "brood_temp_max": 35.65,
+      "weight_kg": 26.21,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0032
+    },
+    {
+      "timestamp": "2021-06-16 17:00:00",
+      "brood_temp_max": 35.48,
+      "weight_kg": 26.33,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.016
+    },
+    {
+      "timestamp": "2021-06-16 18:00:00",
+      "brood_temp_max": 35.36,
+      "weight_kg": 26.41,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0324
+    },
+    {
+      "timestamp": "2021-06-16 19:00:00",
+      "brood_temp_max": 35.29,
+      "weight_kg": 26.47,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0486
+    },
+    {
+      "timestamp": "2021-06-16 20:00:00",
+      "brood_temp_max": 35.38,
+      "weight_kg": 26.51,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0553
+    },
+    {
+      "timestamp": "2021-06-16 21:00:00",
+      "brood_temp_max": 35.42,
+      "weight_kg": 26.51,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0553
+    },
+    {
+      "timestamp": "2021-06-16 22:00:00",
+      "brood_temp_max": 35.39,
+      "weight_kg": 26.47,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0487
+    },
+    {
+      "timestamp": "2021-06-16 23:00:00",
+      "brood_temp_max": 35.31,
+      "weight_kg": 26.46,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.052
+    },
+    {
+      "timestamp": "2021-06-17 00:00:00",
+      "brood_temp_max": 35.3,
+      "weight_kg": 26.45,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0488
+    },
+    {
+      "timestamp": "2021-06-17 01:00:00",
+      "brood_temp_max": 35.34,
+      "weight_kg": 26.45,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0458
+    },
+    {
+      "timestamp": "2021-06-17 02:00:00",
+      "brood_temp_max": 35.3,
+      "weight_kg": 26.42,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0395
+    },
+    {
+      "timestamp": "2021-06-17 03:00:00",
+      "brood_temp_max": 35.47,
+      "weight_kg": 26.2,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0065
+    },
+    {
+      "timestamp": "2021-06-17 04:00:00",
+      "brood_temp_max": 35.52,
+      "weight_kg": 26.17,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0033
+    },
+    {
+      "timestamp": "2021-06-17 05:00:00",
+      "brood_temp_max": 35.54,
+      "weight_kg": 26.2,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0098
+    },
+    {
+      "timestamp": "2021-06-17 06:00:00",
+      "brood_temp_max": 35.69,
+      "weight_kg": 26.26,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0033
+    },
+    {
+      "timestamp": "2021-06-17 07:00:00",
+      "brood_temp_max": 35.84,
+      "weight_kg": 26.36,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0517
+    },
+    {
+      "timestamp": "2021-06-17 08:00:00",
+      "brood_temp_max": 35.78,
+      "weight_kg": 26.42,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0257
+    },
+    {
+      "timestamp": "2021-06-17 09:00:00",
+      "brood_temp_max": 35.77,
+      "weight_kg": 26.44,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0324
+    },
+    {
+      "timestamp": "2021-06-17 10:00:00",
+      "brood_temp_max": 35.68,
+      "weight_kg": 26.41,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0324
+    },
+    {
+      "timestamp": "2021-06-17 11:00:00",
+      "brood_temp_max": 35.68,
+      "weight_kg": 26.39,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0326
+    },
+    {
+      "timestamp": "2021-06-17 12:00:00",
+      "brood_temp_max": 35.54,
+      "weight_kg": 26.38,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0389
+    },
+    {
+      "timestamp": "2021-06-17 13:00:00",
+      "brood_temp_max": 35.52,
+      "weight_kg": 26.38,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-17 14:00:00",
+      "brood_temp_max": 35.54,
+      "weight_kg": 26.38,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0329
+    },
+    {
+      "timestamp": "2021-06-17 15:00:00",
+      "brood_temp_max": 35.6,
+      "weight_kg": 26.39,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0327
+    },
+    {
+      "timestamp": "2021-06-17 16:00:00",
+      "brood_temp_max": 35.1,
+      "weight_kg": 26.48,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0292
+    },
+    {
+      "timestamp": "2021-06-17 17:00:00",
+      "brood_temp_max": 35.16,
+      "weight_kg": 26.52,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0292
+    },
+    {
+      "timestamp": "2021-06-17 18:00:00",
+      "brood_temp_max": 35.25,
+      "weight_kg": 26.52,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0323
+    },
+    {
+      "timestamp": "2021-06-17 19:00:00",
+      "brood_temp_max": 35.12,
+      "weight_kg": 26.54,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0295
+    },
+    {
+      "timestamp": "2021-06-17 20:00:00",
+      "brood_temp_max": 35.22,
+      "weight_kg": 26.55,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0487
+    },
+    {
+      "timestamp": "2021-06-17 21:00:00",
+      "brood_temp_max": 35.24,
+      "weight_kg": 26.56,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0618
+    },
+    {
+      "timestamp": "2021-06-17 22:00:00",
+      "brood_temp_max": 35.23,
+      "weight_kg": 26.56,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0519
+    },
+    {
+      "timestamp": "2021-06-17 23:00:00",
+      "brood_temp_max": 35.27,
+      "weight_kg": 26.58,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0455
+    },
+    {
+      "timestamp": "2021-06-18 00:00:00",
+      "brood_temp_max": 35.38,
+      "weight_kg": 26.6,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0392
+    },
+    {
+      "timestamp": "2021-06-18 01:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 26.62,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0326
+    },
+    {
+      "timestamp": "2021-06-18 02:00:00",
+      "brood_temp_max": 35.25,
+      "weight_kg": 26.52,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0358
+    },
+    {
+      "timestamp": "2021-06-18 03:00:00",
+      "brood_temp_max": 35.47,
+      "weight_kg": 26.47,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0359
+    },
+    {
+      "timestamp": "2021-06-18 04:00:00",
+      "brood_temp_max": 35.42,
+      "weight_kg": 26.62,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0357
+    },
+    {
+      "timestamp": "2021-06-18 05:00:00",
+      "brood_temp_max": 35.49,
+      "weight_kg": 26.76,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0419
+    },
+    {
+      "timestamp": "2021-06-18 06:00:00",
+      "brood_temp_max": 35.53,
+      "weight_kg": 26.81,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.0517
+    },
+    {
+      "timestamp": "2021-06-18 07:00:00",
+      "brood_temp_max": 35.61,
+      "weight_kg": 26.86,
+      "humidity": null,
+      "actual_label": 1,
+      "predicted_risk": 0.045
+    },
+    {
+      "timestamp": "2021-06-18 08:00:00",
+      "brood_temp_max": 35.82,
+      "weight_kg": 26.84,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.029
+    },
+    {
+      "timestamp": "2021-06-18 09:00:00",
+      "brood_temp_max": 36.42,
+      "weight_kg": 24.75,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0456
+    },
+    {
+      "timestamp": "2021-06-18 10:00:00",
+      "brood_temp_max": 35.67,
+      "weight_kg": 23.88,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0164
+    },
+    {
+      "timestamp": "2021-06-18 11:00:00",
+      "brood_temp_max": 35.78,
+      "weight_kg": 23.85,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0256
+    },
+    {
+      "timestamp": "2021-06-18 12:00:00",
+      "brood_temp_max": 35.98,
+      "weight_kg": 23.77,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0195
+    },
+    {
+      "timestamp": "2021-06-18 13:00:00",
+      "brood_temp_max": 36.0,
+      "weight_kg": 23.62,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0261
+    },
+    {
+      "timestamp": "2021-06-18 14:00:00",
+      "brood_temp_max": 35.98,
+      "weight_kg": 23.69,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0161
+    },
+    {
+      "timestamp": "2021-06-18 15:00:00",
+      "brood_temp_max": 35.72,
+      "weight_kg": 23.79,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0096
+    },
+    {
+      "timestamp": "2021-06-18 16:00:00",
+      "brood_temp_max": 35.49,
+      "weight_kg": 23.84,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-18 17:00:00",
+      "brood_temp_max": 35.43,
+      "weight_kg": 23.85,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-18 18:00:00",
+      "brood_temp_max": 35.43,
+      "weight_kg": 23.85,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-18 19:00:00",
+      "brood_temp_max": 35.34,
+      "weight_kg": 23.87,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0097
+    },
+    {
+      "timestamp": "2021-06-18 20:00:00",
+      "brood_temp_max": 35.38,
+      "weight_kg": 23.9,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0095
+    },
+    {
+      "timestamp": "2021-06-18 21:00:00",
+      "brood_temp_max": 35.51,
+      "weight_kg": 23.93,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0031
+    },
+    {
+      "timestamp": "2021-06-18 22:00:00",
+      "brood_temp_max": 35.47,
+      "weight_kg": 23.94,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-18 23:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 23.94,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.013
+    },
+    {
+      "timestamp": "2021-06-19 00:00:00",
+      "brood_temp_max": 35.49,
+      "weight_kg": 23.97,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0131
+    },
+    {
+      "timestamp": "2021-06-19 01:00:00",
+      "brood_temp_max": 35.46,
+      "weight_kg": 23.99,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0131
+    },
+    {
+      "timestamp": "2021-06-19 02:00:00",
+      "brood_temp_max": 35.5,
+      "weight_kg": 23.97,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0097
+    },
+    {
+      "timestamp": "2021-06-19 03:00:00",
+      "brood_temp_max": 35.32,
+      "weight_kg": 23.98,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0
+    },
+    {
+      "timestamp": "2021-06-19 04:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 24.03,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0032
+    },
+    {
+      "timestamp": "2021-06-19 05:00:00",
+      "brood_temp_max": 35.28,
+      "weight_kg": 24.03,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0
+    },
+    {
+      "timestamp": "2021-06-19 06:00:00",
+      "brood_temp_max": 35.25,
+      "weight_kg": 23.96,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0
+    },
+    {
+      "timestamp": "2021-06-19 07:00:00",
+      "brood_temp_max": 35.22,
+      "weight_kg": 23.96,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0
+    },
+    {
+      "timestamp": "2021-06-19 08:00:00",
+      "brood_temp_max": 35.3,
+      "weight_kg": 23.94,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0033
+    },
+    {
+      "timestamp": "2021-06-19 09:00:00",
+      "brood_temp_max": 35.25,
+      "weight_kg": 23.9,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0063
+    },
+    {
+      "timestamp": "2021-06-19 10:00:00",
+      "brood_temp_max": 35.51,
+      "weight_kg": 23.85,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-19 11:00:00",
+      "brood_temp_max": 35.99,
+      "weight_kg": 23.8,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0095
+    },
+    {
+      "timestamp": "2021-06-19 12:00:00",
+      "brood_temp_max": 36.0,
+      "weight_kg": 23.75,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0063
+    },
+    {
+      "timestamp": "2021-06-19 13:00:00",
+      "brood_temp_max": 36.04,
+      "weight_kg": 23.62,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0096
+    },
+    {
+      "timestamp": "2021-06-19 14:00:00",
+      "brood_temp_max": 35.98,
+      "weight_kg": 23.57,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0129
+    },
+    {
+      "timestamp": "2021-06-19 15:00:00",
+      "brood_temp_max": 35.96,
+      "weight_kg": 23.69,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0096
+    },
+    {
+      "timestamp": "2021-06-19 16:00:00",
+      "brood_temp_max": 35.54,
+      "weight_kg": 23.78,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0031
+    },
+    {
+      "timestamp": "2021-06-19 17:00:00",
+      "brood_temp_max": 35.48,
+      "weight_kg": 23.81,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0
+    },
+    {
+      "timestamp": "2021-06-19 18:00:00",
+      "brood_temp_max": 35.24,
+      "weight_kg": 23.86,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0033
+    },
+    {
+      "timestamp": "2021-06-19 19:00:00",
+      "brood_temp_max": 35.37,
+      "weight_kg": 23.9,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0033
+    },
+    {
+      "timestamp": "2021-06-19 20:00:00",
+      "brood_temp_max": 35.42,
+      "weight_kg": 23.95,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0066
+    },
+    {
+      "timestamp": "2021-06-19 21:00:00",
+      "brood_temp_max": 35.52,
+      "weight_kg": 23.99,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0131
+    },
+    {
+      "timestamp": "2021-06-19 22:00:00",
+      "brood_temp_max": 35.42,
+      "weight_kg": 24.02,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0164
+    },
+    {
+      "timestamp": "2021-06-19 23:00:00",
+      "brood_temp_max": 35.4,
+      "weight_kg": 24.04,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0164
+    },
+    {
+      "timestamp": "2021-06-20 00:00:00",
+      "brood_temp_max": 35.4,
+      "weight_kg": 24.07,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0164
+    },
+    {
+      "timestamp": "2021-06-20 01:00:00",
+      "brood_temp_max": 35.44,
+      "weight_kg": 24.09,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0166
+    },
+    {
+      "timestamp": "2021-06-20 02:00:00",
+      "brood_temp_max": 35.42,
+      "weight_kg": 24.19,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0164
+    },
+    {
+      "timestamp": "2021-06-20 03:00:00",
+      "brood_temp_max": 35.25,
+      "weight_kg": 24.35,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.01
+    },
+    {
+      "timestamp": "2021-06-20 05:00:00",
+      "brood_temp_max": 35.19,
+      "weight_kg": 25.18,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0132
+    },
+    {
+      "timestamp": "2021-06-20 06:00:00",
+      "brood_temp_max": 35.25,
+      "weight_kg": 24.37,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0031
+    },
+    {
+      "timestamp": "2021-06-20 09:00:00",
+      "brood_temp_max": 35.16,
+      "weight_kg": 23.97,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0031
+    },
+    {
+      "timestamp": "2021-06-20 10:00:00",
+      "brood_temp_max": 35.34,
+      "weight_kg": 23.94,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.01
+    },
+    {
+      "timestamp": "2021-06-20 11:00:00",
+      "brood_temp_max": 35.3,
+      "weight_kg": 23.9,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0129
+    },
+    {
+      "timestamp": "2021-06-20 12:00:00",
+      "brood_temp_max": 35.55,
+      "weight_kg": 23.84,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0031
+    },
+    {
+      "timestamp": "2021-06-20 13:00:00",
+      "brood_temp_max": 35.53,
+      "weight_kg": 23.84,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-20 14:00:00",
+      "brood_temp_max": 35.44,
+      "weight_kg": 23.86,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0067
+    },
+    {
+      "timestamp": "2021-06-20 15:00:00",
+      "brood_temp_max": 35.43,
+      "weight_kg": 23.89,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0064
+    },
+    {
+      "timestamp": "2021-06-20 16:00:00",
+      "brood_temp_max": 35.63,
+      "weight_kg": 23.88,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0031
+    },
+    {
+      "timestamp": "2021-06-20 17:00:00",
+      "brood_temp_max": 35.49,
+      "weight_kg": 23.96,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.013
+    },
+    {
+      "timestamp": "2021-06-20 18:00:00",
+      "brood_temp_max": 35.31,
+      "weight_kg": 24.0,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.01
+    },
+    {
+      "timestamp": "2021-06-20 19:00:00",
+      "brood_temp_max": 35.36,
+      "weight_kg": 24.07,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0033
+    },
+    {
+      "timestamp": "2021-06-20 20:00:00",
+      "brood_temp_max": 35.36,
+      "weight_kg": 24.1,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.01
+    },
+    {
+      "timestamp": "2021-06-20 21:00:00",
+      "brood_temp_max": 35.41,
+      "weight_kg": 24.13,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.0133
+    },
+    {
+      "timestamp": "2021-06-20 22:00:00",
+      "brood_temp_max": 35.38,
+      "weight_kg": 24.13,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.01
+    },
+    {
+      "timestamp": "2021-06-20 23:00:00",
+      "brood_temp_max": 35.42,
+      "weight_kg": 24.15,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.01
+    },
+    {
+      "timestamp": "2021-06-21 00:00:00",
+      "brood_temp_max": 35.45,
+      "weight_kg": 24.18,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.01
+    },
+    {
+      "timestamp": "2021-06-21 01:00:00",
+      "brood_temp_max": 35.35,
+      "weight_kg": 24.18,
+      "humidity": null,
+      "actual_label": 0,
+      "predicted_risk": 0.01
+    }
+  ]
+}

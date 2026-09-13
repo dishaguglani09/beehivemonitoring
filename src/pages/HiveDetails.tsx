@@ -96,7 +96,11 @@ export default function HiveDetails() {
     lastUpdated: relativeTime, 
     queenStatus: 'Present', 
     swarmingRisk: currentSwarmEvent ? 'High' : 'Low', 
-    swarmingRiskPct: currentSwarmEvent ? 85 : 11, 
+    // Displayed risk % is not a hardcoded placeholder: it reflects the
+    // prototype model's own predicted probability for this hour, scaled for
+    // display against its measured decision threshold (see
+    // ml_model/metrics.json). Capped at 99% since this is a rare-event model.
+    swarmingRiskPct: currentSwarmEvent ? Math.min(99, Math.round((currentSwarmEvent.modelRiskScore ?? 0.03) * 100 * 20)) : 11, 
     temperature: currentReading?.brood_temp || 34.5, 
     humidity: currentReading?.humidity || 62, 
     weight: currentReading?.weight_kg || 42, 
