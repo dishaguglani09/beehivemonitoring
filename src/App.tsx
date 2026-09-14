@@ -18,14 +18,15 @@ function AppRoutes() {
     <ThemeProvider>
       <Layout>
           <Routes>
-            <Route path="/overview" element={<Overview />} />
+            {/* Overview page hidden for now — route disabled; redirects to Expo Demo */}
+            <Route path="/overview" element={<Navigate to="/expo" replace />} />
             <Route path="/hives" element={<MyHives />} />
             <Route path="/hives/:id" element={<HiveDetails />} />
             <Route path="/alerts" element={<Alerts />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/system" element={<System />} />
             <Route path="/expo" element={<ExpoDashboard />} />
-            <Route path="*" element={<Navigate to="/overview" replace />} />
+            <Route path="*" element={<Navigate to="/expo" replace />} />
           </Routes>
       </Layout>
     </ThemeProvider>
