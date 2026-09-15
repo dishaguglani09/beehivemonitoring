@@ -33,7 +33,7 @@ const initialRecommendations = [
   {
     id: 1,
     priority: 'HIGH' as RecommendationPriority,
-    title: 'Hive A-02 Brood Thermal Spike',
+    title: 'Hive A-01 Brood Thermal Spike',
     issue: 'Temperature rose to 36.4°C during peak noon hours (+1.8°C above optimal colony baseline).',
     action: 'Inspect top hive entrance ventilation and ensure shading is unobstructed.',
     confidence: 94,
@@ -45,7 +45,7 @@ const initialRecommendations = [
   {
     id: 2,
     priority: 'MEDIUM' as RecommendationPriority,
-    title: 'Hive B-01 Foraging Optimization',
+    title: 'Hive A-01 Foraging Optimization',
     issue: 'High floral nectar flow detected within 1.5 km radius, but entrance traffic is constrained.',
     action: 'Remove entrance reducer to expand forager flight lanes for morning peak window.',
     confidence: 89,
@@ -70,7 +70,7 @@ const initialRecommendations = [
 
 const promptChips = [
   'Is Hive A-01 ready for harvest?',
-  'Why did Hive A-02 temp spike?',
+  'Why did Hive A-01 temp spike?',
   'What is the swarming risk?',
   'Best foraging window tomorrow?',
 ]
@@ -82,7 +82,7 @@ export default function AIInsights() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      text: 'Hello Disha! I am your HiveSense AI Assistant. I continuously evaluate telemetry across all 4 hives. Ask me about colony health, swarm detection, thermal stability, or honey yields.',
+      text: 'Hello Disha! I am your HiveSense AI Assistant. I continuously evaluate telemetry for your hive. Ask me about colony health, swarm detection, thermal stability, or honey yields.',
       time: 'Just now',
     },
   ])
@@ -100,17 +100,17 @@ export default function AIInsights() {
 
     setTimeout(() => {
       let reply =
-        'Based on real-time sensor analysis, your hives are exhibiting stable colony dynamics. Brood core temperature is steady at 34.2°C, and acoustics indicate a fertile queen with low swarming impulse (12%).'
+        'Based on real-time sensor analysis, your hive is exhibiting stable colony dynamics. Brood core temperature is steady at 34.2°C, and acoustics indicate a fertile queen with low swarming impulse (12%).'
 
       if (text.toLowerCase().includes('harvest') || text.toLowerCase().includes('honey')) {
         reply =
           '🍯 **Honey Harvest Forecast:** Hive A-01 currently holds 42.8 kg total weight with an estimated harvestable yield of 18–22 kg. Honey moisture index is stabilizing. Recommended harvest window: Next 10–14 days during dry weather.'
-      } else if (text.toLowerCase().includes('spike') || text.toLowerCase().includes('temp') || text.toLowerCase().includes('a-02')) {
+      } else if (text.toLowerCase().includes('spike') || text.toLowerCase().includes('temp') || text.toLowerCase().includes('a-01')) {
         reply =
-          '🌡 **Hive A-02 Analysis:** The temperature reached 36.4°C at 1:15 PM due to high ambient heat (31.8°C) and direct sun exposure. Worker fanning compensated effectively. Recommendation: Adjust entrance reducer or add a shade board.'
+          '🌡 **Hive A-01 Analysis:** The temperature reached 36.4°C at 1:15 PM due to high ambient heat (31.8°C) and direct sun exposure. Worker fanning compensated effectively. Recommendation: Adjust entrance reducer or add a shade board.'
       } else if (text.toLowerCase().includes('swarm')) {
         reply =
-          '🐝 **Swarming Assessment:** Swarm probability across all 4 hives is currently LOW (average 11%). Acoustic spectrum shows no queen piping signals (300–500 Hz), and vibration telemetry is in the calm 0.08–0.12g baseline.'
+          '🐝 **Swarming Assessment:** Swarm probability for your hive is currently LOW (11%). Acoustic spectrum shows no queen piping signals (300–500 Hz), and vibration telemetry is in the calm 0.08–0.12g baseline.'
       } else if (text.toLowerCase().includes('forag') || text.toLowerCase().includes('window')) {
         reply =
           '🌸 **Foraging Intelligence:** Tomorrow morning between 9:00 AM and 1:00 PM will offer optimal foraging conditions (25–27°C, low wind < 9 km/h, 0% precipitation). Mustard and acacia blooms are active within 1.2 km.'
@@ -531,7 +531,7 @@ export default function AIInsights() {
             </div>
 
             <div className="text-xs font-bold uppercase tracking-wider text-[var(--text-tertiary)] hidden sm:block bg-[var(--bg-card-hover)] border border-[var(--border-subtle)] px-3 py-1.5 rounded-lg">
-              Telemetry Context: <strong className="text-[#a78bfa]">All 4 Hives Active</strong>
+              Telemetry Context: <strong className="text-[#a78bfa]">1 Hive Active</strong>
             </div>
           </div>
 
